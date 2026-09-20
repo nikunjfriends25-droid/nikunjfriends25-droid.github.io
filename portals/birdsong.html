@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Birdsong Archive — Nikunj Jambu</title>
+<meta name="description" content="A personal birdsong archive: field recordings run through an acoustic model, mapped and browsable by species, with playable reference calls." />
+<link rel="canonical" href="https://nikunjfriends25-droid.github.io/portals/birdsong.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Nikunj Jambu" />
+<meta property="og:title" content="Birdsong Archive — Nikunj Jambu" />
+<meta property="og:description" content="A personal birdsong archive: field recordings run through an acoustic model, mapped and browsable by species, with playable reference calls." />
+<meta property="og:url" content="https://nikunjfriends25-droid.github.io/portals/birdsong.html" />
+<meta property="og:image" content="https://nikunjfriends25-droid.github.io/uploads/proj-birdsong.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Birdsong Archive — Nikunj Jambu" />
+<meta name="twitter:description" content="A personal birdsong archive: field recordings run through an acoustic model, mapped and browsable by species, with playable reference calls." />
+<meta name="twitter:image" content="https://nikunjfriends25-droid.github.io/uploads/proj-birdsong.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CreativeWork","name":"Birdsong Archive","url":"https://call-recordings.streamlit.app","description":"A personal birdsong archive: field recordings run through an acoustic model, mapped and browsable by species, with playable reference calls.","author":{"@type":"Person","name":"Nikunj Jambu"}}
+</script>
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body { background:#efeadd; color:#1a1c19; font-family:'Space Grotesk', system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:#7a2f2f; }
+  .wrap { max-width:840px; margin:0 auto; padding:40px 24px 96px; }
+  .kicker { font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#7a2f2f; }
+  h1 { font-family:'Libre Baskerville', Georgia, serif; font-size:clamp(28px, 5vw, 42px); line-height:1.15; margin:12px 0 0; }
+  .lede { font-size:18px; line-height:1.65; color:#4a4d47; margin:16px 0 0; text-wrap:pretty; }
+  .shot { margin:34px 0 0; border:1px solid rgba(26,28,25,.22); background:#fbfaf5; }
+  .shot img { display:block; width:100%; height:auto; }
+  h2 { font-family:'Libre Baskerville', Georgia, serif; font-size:21px; margin:44px 0 0; }
+  .txt p { margin:10px 0 0; font-size:16px; line-height:1.75; color:#4a4d47;  text-wrap:pretty; }
+  .txt ul { margin:12px 0 0; padding-left:20px;  display:flex; flex-direction:column; gap:8px; }
+  .txt li { font-size:16px; line-height:1.7; color:#4a4d47; }
+  h2 + p { margin:10px 0 0; font-size:16px; line-height:1.75; color:#4a4d47;  text-wrap:pretty; }
+  .todo { color:#8b8e86; font-style:italic; }
+  .meta { margin:36px 0 0; padding-top:18px; border-top:1px solid rgba(26,28,25,.2);
+           display:grid; grid-template-columns:auto 1fr; gap:9px 22px;
+           font-family:'Space Mono', monospace; font-size:11px; line-height:1.6; color:#6d706a; }
+  .meta dt { letter-spacing:.1em; text-transform:uppercase; color:#8b8e86; }
+  .meta dd { margin:0; overflow-wrap:anywhere; }
+  .visit { display:inline-block; margin:30px 0 0; padding:13px 18px; background:#7a2f2f; color:#f8f6f0;
+            font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; }
+  .back { font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html#restore">← Nikunj Jambu</a>
+  <p class="kicker" style="margin:26px 0 0">Interactive dashboard</p>
+  <h1>Birdsong Archive</h1>
+  <p class="lede">A personal birdsong archive: field recordings run through an acoustic model, mapped and browsable by species, with playable reference calls.</p>
+
+  <div class="shot"><img src="../uploads/proj-birdsong.png" alt="Screenshot of Birdsong Archive" /></div>
+
+  <h2>What it is</h2>
+  <div class="txt"><p>A personal birdsong archive and analysis portal, built around 327 field recordings collected by Nikunj Jambu. The portal processes those recordings through an AI acoustic model and surfaces 1,173 detections across 157 species — complete with a geographic map, species profiles, a detection timeline, playable Xeno-canto audio for each species, and a false-positive flagging tool. It is intended for birders, naturalists, and anyone curious about what is audible in the field but invisible to the naked eye.</p></div>
+
+  <h2>Why it exists</h2>
+  <div class="txt"><p>Most personal field recordings live in a folder on a hard drive, unanalysed and unsearchable. Species-level acoustic identification is technically possible but locked inside desktop tools that produce spreadsheets, not browsable interfaces. This portal converts raw audio into an explorable dataset — making it possible to ask questions like which species appeared in February, what was heard at this GPS point, or is this a reliable detection or a false positive — without writing a single line of code.</p></div>
+
+  <h2>How it was built</h2>
+  <div class="txt"><p>Recordings were run through BirdNET v2.4 (Cornell Lab / Chemnitz University of Technology), an open-source neural network trained on over 6,500 species. Detections were extracted, cleaned, and enriched with species metadata, range information, and audio samples from public sources. The interface is built with Python and Streamlit, deployed on Streamlit Cloud at no cost. The entire pipeline from raw audio to deployed dashboard runs on open-source tools and free infrastructure.</p></div>
+
+  <h2>Data &amp; sources</h2>
+  <div class="txt"><ul><li>Field recordings: collected by Nikunj Jambu, India, 2025–2026, using the Merlin app.</li><li>Acoustic identification: BirdNET v2.4 — Kahl et al., Cornell Lab &amp; Chemnitz University of Technology. Open-source, Apache 2.0.</li><li>Species range data: eBird (Cornell Lab of Ornithology). Free for non-commercial use with attribution.</li><li>Call audio: Xeno-canto (xeno-canto.org), served on-demand. Individual recordings carry their own Creative Commons licences, credited per species.</li><li>Species photographs: iNaturalist, Creative Commons. Attribution shown per image.</li></ul><p>All third-party media is credited to its original contributor at the point of use.</p></div>
+
+  <h2>What is next</h2>
+  <div class="txt"><p>The portal is actively being developed. Future versions will include richer species information, improved identification accuracy, support for recordings from additional locations, and tools for community input on uncertain detections. If you notice an error, have a recording you would like to contribute, or simply want to get in touch, reach out via the contact details below.</p></div>
+
+
+  <h2>Contact</h2>
+  <div class="txt"><p>To report an error, offer a recording, or just get in touch: <a href="mailto:jambu.nikunj@gmail.com">jambu.nikunj@gmail.com</a></p></div>
+
+  <dl class="meta">
+    <dt>Site</dt><dd><a href="https://call-recordings.streamlit.app" target="_blank" rel="noopener">call-recordings.streamlit.app</a></dd>
+    <dt>Type</dt><dd>Interactive dashboard</dd>
+    <dt>By</dt><dd>Nikunj Jambu</dd>
+  </dl>
+
+  <a class="visit" href="https://call-recordings.streamlit.app" target="_blank" rel="noopener">Visit call-recordings.streamlit.app →</a>
+</div>
+<script>
+  // Best case the details tab was opened from the site: closing it returns to the exact place.
+  // If the browser refuses to close it, go back to the site and restore layout and scroll position.
+  document.querySelector('.back').addEventListener('click', function (e) {
+    e.preventDefault();
+    var href = this.href;
+    window.close();
+    setTimeout(function () { location.href = href; }, 250);
+  });
+</script>
+</body>
+</html>
