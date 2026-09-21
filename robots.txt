@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nikunjfriends25-droid.github.io/sitemap.xml
+Sitemap: https://nikunjjambu.in/sitemap.xml
