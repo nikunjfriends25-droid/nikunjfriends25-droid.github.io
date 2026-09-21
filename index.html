@@ -415,6 +415,9 @@
 .s6 .press-rows blockquote::after{content:'\201D'}
 .s6 .press-rows a{font: 700 13px/1 var(--gothic); letter-spacing: .12em; text-transform: uppercase; color: var(--stamp); text-decoration: none;}
 .s6 .press-rows a:hover{text-decoration: underline;}
+.s6 .press-rows .pbtn{font: 700 13px/1 var(--gothic); letter-spacing: .12em; text-transform: uppercase; color: var(--stamp); background: none; border: 0; padding: 0; cursor: pointer;}
+.s6 .press-rows .pbtn:hover{text-decoration: underline;}
+.s6 .press-rows .pbtn:focus-visible{outline: 2px solid var(--stamp); outline-offset: 3px;}
 @media (max-width: 860px){
 .s6 .press-rows .prow{grid-template-columns: 1fr;}
 .s6 .press-rows .prow > *{border-right: none; padding-block: 8px;}
@@ -922,7 +925,7 @@
 
     <div id="sheet-index" style="scroll-margin-top:18px; padding:24px 0 0; display:flex; flex-direction:column; gap:16px">
       <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:14px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">
-        <span style="color:#3f6b4a">Your CV is in each of these. Choose a layout to read it. The content is identical, only the look changes.</span>
+        <span style="color:#3f6b4a">My CV is in each of these. Choose a layout to read it. The content is identical, only the look changes.</span>
         <span style="text-align:right">You can switch layouts from the top bar at any time.</span>
       </div>
     <div class="ch-grid" style="display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:16px">
@@ -1104,7 +1107,7 @@
             <article class="prow">
               <span class="src">{{ p.outlet }}</span>
               <span class="dt">{{ p.date }}</span>
-              <div><h3>{{ p.title }}</h3><sc-if value="{{ p.hasQuote }}"><blockquote>{{ p.quote }}</blockquote></sc-if><a href="{{ p.url }}" target="_blank" rel="noopener">Read the piece</a></div>
+              <div><h3>{{ p.title }}</h3><sc-if value="{{ p.hasQuote }}"><blockquote>{{ p.quote }}</blockquote></sc-if><button type="button" class="pbtn" onClick="{{ p.open }}">Read the piece</button></div>
             </article>
           </sc-for>
         </div>
@@ -2497,7 +2500,7 @@ class Component extends DCLogic {
       s6Plates: s6Plates,
       s6Roles: DATA.roles.map((r, i) => Object.assign({}, r, { n: pad2(i + 1), ulcls: r.bullets.length > 2 ? 'cols2' : '' })),
       s6Pubs: DATA.pubs.map((p, i) => Object.assign({}, p, { n: pad2(i + 1) })),
-      s6Press: DATA.press.map(p => ({ outlet: p.outlet, date: p.date, title: p.title, quote: p.quote || '', hasQuote: !!p.quote, url: p.url })),
+      s6Press: DATA.press.map(p => ({ outlet: p.outlet, date: p.date, title: p.title, quote: p.quote || '', hasQuote: !!p.quote, url: p.url, open: this.openPress(p) })),
       s6Certs: DATA.certs.map((c, i) => ({ name: c.name, issuer: c.issuer, open: this.openS6Cert(c, i), img: 'uploads/certs/cert-' + c.url.replace(/[^a-z0-9]+/gi, '').slice(-14) + '.png' })),
       s6Stations: WAYPOINTS.map((w, i) => ({ n: pad2(i + 1), place: w.place, lt: Number(w.lt).toFixed(4), ln: Number(w.ln).toFixed(4), method: s6Method(w.note) })),
       s6Points: s6Points,
