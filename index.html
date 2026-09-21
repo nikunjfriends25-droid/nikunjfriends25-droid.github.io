@@ -71,13 +71,30 @@
   background: var(--sheet);
   color: var(--ink);
   font-family: var(--body);
-  font-size: 15.5px;
+  font-size: 18.5px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;}
 .s6 img{max-width: 100%; display: block;}
 .s6 a{color: var(--ink); text-decoration-color: var(--print-soft); text-underline-offset: 3px;}
 .s6 a:hover{text-decoration-color: var(--stamp);}
 [id^="a-"], [id^="n-"]{scroll-margin-top: 150px;}
+@media (max-width: 820px){
+  .at-top{grid-template-columns: 1fr !important;}
+  .at-top > *{grid-column: auto !important; grid-row: auto !important;}
+  .ch-grid{grid-template-columns: repeat(2, minmax(0, 1fr)) !important;}
+}
+@media (max-width: 820px){
+  .nb-top{grid-template-columns: 1fr !important;}
+  .sp-root main > section{padding-left: 20px !important; padding-right: 20px !important;}
+  #s-work{padding-left: 0 !important; padding-right: 0 !important;}
+  #s-work > p{padding-left: 20px !important; padding-right: 20px !important;}
+  #s-work > a{grid-template-columns: minmax(0, 1fr) !important;}
+  #s-work > a > div:last-child{padding: 24px 20px !important;}
+  [id^="n-"] span{overflow-wrap: anywhere;}
+  .sp-root{flex-direction: column;}
+  .sp-aside{position: static !important; height: auto !important; flex: none !important; width: 100%; border-right: none !important; border-bottom: 1px solid rgba(240,238,228,.16);}
+}
+@media (max-width: 520px){ .ch-grid{grid-template-columns: 1fr !important;} }
 .s6 ::selection{background: var(--ink); color: var(--sheet);}
 .s6 :focus-visible{outline: 2px solid var(--stamp); outline-offset: 2px;}
 .s6 *{scrollbar-width: thin; scrollbar-color: var(--print-soft) transparent;}
@@ -96,7 +113,7 @@
 .s6 .margin a{position: absolute; left: 0; right: 0;
   display: flex; flex-direction: column; align-items: center; gap: 3px;
   padding-block: 7px; text-decoration: none;
-  font: 400 12px/1 var(--typed); color: var(--ink);
+  font: 400 14px/1 var(--typed); color: var(--ink);
   border-bottom: 1px solid var(--rule-onsheet);}
 .s6 .margin a .mn{font-weight: 700; font-size: 12.5px;}
 .s6 .margin a .ml{writing-mode: vertical-rl; font: 700 11px/1 var(--gothic);
@@ -120,10 +137,10 @@
   min-width: 0;}
 .s6 .cell:last-child{border-right: none;}
 .s6 .cell > .lab{display: block;
-  font: 700 11px/1.4 var(--gothic);
+  font: 700 13px/1.4 var(--gothic);
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--print); margin-bottom: 5px;}
-.s6 .cell > .val{font: 400 15px/1.3 var(--typed); color: var(--ink);}
+.s6 .cell > .val{font: 400 17.5px/1.3 var(--typed); color: var(--ink);}
 .s6 .cell > .val.big{font-size: clamp(19px, 2vw, 27px); line-height: 1.1;}
 .s6 .c-name{grid-column: span 6;}
 .s6 .c-name .val{font-family: var(--gothic); font-weight: 700; letter-spacing: -.015em;
@@ -142,28 +159,28 @@
 .s6 .cell{border-right: none; border-bottom: 1px solid var(--rule-onsheet);}
 }
 .s6 .stamp{display: inline-flex; align-items: center; gap: 7px;
-  font: 700 11px/1 var(--gothic); letter-spacing: .14em; text-transform: uppercase;
+  font: 700 13px/1 var(--gothic); letter-spacing: .14em; text-transform: uppercase;
   color: var(--stamp); border: 1.5px solid var(--stamp);
   padding: 5px 9px; transform: rotate(-1.4deg);}
 .s6 .stamp::before{content: ''; width: 6px; height: 6px; background: var(--stamp); border-radius: 50%;}
 .s6 .btn{display: inline-flex; align-items: center; justify-content: space-between; gap: 14px;
   width: 100%; background: var(--ink); color: var(--sheet);
-  font: 700 12px/1 var(--gothic); letter-spacing: .12em; text-transform: uppercase;
+  font: 700 14px/1 var(--gothic); letter-spacing: .12em; text-transform: uppercase;
   text-decoration: none; padding: 13px 15px; border: none;
   transition: background-color .15s;}
 .s6 .btn:hover{background: var(--stamp);}
 .s6 .btn:active{transform: translateY(1px);}
-.s6 .btn .n{font: 400 12px/1 var(--typed); opacity: .72; letter-spacing: 0;}
+.s6 .btn .n{font: 400 14px/1 var(--typed); opacity: .72; letter-spacing: 0;}
 .s6 .sched{border-bottom: 2px solid var(--ink);}
 .s6 .sched.on-top{background: var(--top);}
 .s6 .sched-head{display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px;
   padding: 14px var(--gut);
   border-bottom: 1px solid var(--ink);
   background: var(--ink);}
-.s6 .sched-head h2{margin: 0; font: 700 clamp(15px, 1.7vw, 21px)/1.1 var(--gothic);
+.s6 .sched-head h2{margin: 0; font: 700 clamp(22px, 2.6vw, 34px)/1.1 var(--gothic);
   letter-spacing: .04em; text-transform: uppercase; color: var(--sheet);}
-.s6 .sched-head .no{font: 700 12px/1 var(--typed); color: var(--sheet); opacity: .7;}
-.s6 .sched-head .of{margin-left: auto; font: 400 12px/1.4 var(--typed); color: rgba(227,178,60,.78);}
+.s6 .sched-head .no{font: 700 16.5px/1 var(--typed); color: var(--sheet); opacity: .7;}
+.s6 .sched-head .of{margin-left: auto; font: 400 16.5px/1.4 var(--typed); color: rgba(227,178,60,.78);}
 .s6 .cols2{columns: 2; column-gap: clamp(20px, 3vw, 44px); column-rule: 1px solid var(--rule-soft);}
 .s6 .cols2 > *{break-inside: avoid;}
 @media (max-width: 760px){
@@ -184,8 +201,8 @@
 .s6 .map-lab{font: 400 12px var(--typed); fill: var(--ink);}
 .s6 .plate-cap{display: flex; flex-wrap: wrap; gap: 4px 18px;
   padding: 9px var(--gut) 11px; border-top: 1px solid var(--rule);
-  font: 400 12px/1.5 var(--typed); color: var(--ink-soft);}
-.s6 .plate-cap b{font: 700 11px/1.5 var(--gothic); letter-spacing: .16em; text-transform: uppercase; color: var(--print);}
+  font: 400 14px/1.5 var(--typed); color: var(--ink-soft);}
+.s6 .plate-cap b{font: 700 13px/1.5 var(--gothic); letter-spacing: .16em; text-transform: uppercase; color: var(--print);}
 
 
 }
@@ -202,10 +219,10 @@
 .s6 .portal:hover{background: rgba(10,90,112,.055);}
 .s6 .portal > *{padding: 13px var(--gut) 15px; border-right: 1px solid var(--rule-soft); min-width: 0;}
 .s6 .portal > *:last-child{border-right: none;}
-.s6 .portal .rn{font: 400 12px/1.5 var(--typed); color: var(--ink-soft); padding-right: 0;}
+.s6 .portal .rn{font: 400 14px/1.5 var(--typed); color: var(--ink-soft); padding-right: 0;}
 .s6 .portal h3{margin: 0 0 4px; font: 700 clamp(17px, 1.9vw, 23px)/1.1 var(--gothic); letter-spacing: -.01em;}
-.s6 .portal .dom{font: 400 12px/1.5 var(--typed); color: var(--print);}
-.s6 .portal p{margin: 0; font: 400 14px/1.5 var(--body); color: var(--ink-soft);}
+.s6 .portal .dom{font: 400 14px/1.5 var(--typed); color: var(--print);}
+.s6 .portal p{margin: 0; font: 400 16.5px/1.5 var(--body); color: var(--ink-soft);}
 .s6 .portal .shot{padding: 0; display: block;}
 .s6 .portal .shot img{width: 100%; aspect-ratio: 1200/630; object-fit: cover; object-position: 50% 0;}
 @media (max-width: 1100px){
@@ -226,8 +243,8 @@
 .s6 .pl img{width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.16,1,.3,1);}
 .s6 .pl:hover img{transform: scale(1.035);}
 .s6 .pl figcaption{display: block; padding: 8px 13px 11px; border-top: 1px solid var(--rule-soft);}
-.s6 .pl .pn{display: block; font: 700 11px/1.4 var(--gothic); letter-spacing: .16em; text-transform: uppercase; color: var(--print);}
-.s6 .pl .pc{display: block; font: 400 12px/1.45 var(--typed); color: var(--ink); margin-top: 2px;}
+.s6 .pl .pn{display: block; font: 700 13px/1.4 var(--gothic); letter-spacing: .16em; text-transform: uppercase; color: var(--print);}
+.s6 .pl .pc{display: block; font: 400 14px/1.45 var(--typed); color: var(--ink); margin-top: 2px;}
 @media (max-width: 1100px){
 .s6 .pl,.s6 .pl.w4{grid-column: span 6;}
 .s6 .pl:last-child:nth-child(odd){grid-column: span 12;}
@@ -243,29 +260,29 @@
 .s6 .appt:last-of-type{border-bottom: none;}
 .s6 .appt > *{padding: 13px var(--gut) 15px; border-right: 1px solid var(--rule-soft); min-width: 0;}
 .s6 .appt > *:last-child{border-right: none;}
-.s6 .appt .rn{font: 400 12px/1.5 var(--typed); color: var(--ink-soft); padding-right: 0;}
-.s6 .appt .per{font: 400 12.5px/1.5 var(--typed); color: var(--ink);}
-.s6 .appt .per .org{display: block; margin-top: 5px; font-family: var(--gothic); font-weight: 700; font-size: 14px; letter-spacing: .01em; color: var(--print);}
+.s6 .appt .rn{font: 400 14px/1.5 var(--typed); color: var(--ink-soft); padding-right: 0;}
+.s6 .appt .per{font: 400 15px/1.5 var(--typed); color: var(--ink);}
+.s6 .appt .per .org{display: block; margin-top: 5px; font-family: var(--gothic); font-weight: 700; font-size: 16.5px; letter-spacing: .01em; color: var(--print);}
 .s6 .appt h3{margin: 0 0 8px; font: 700 clamp(16px, 1.7vw, 20px)/1.15 var(--gothic); letter-spacing: -.005em;}
 .s6 .appt ul{margin: 0; padding: 0; list-style: none;}
-.s6 .appt li{position: relative; padding-left: 17px; margin-bottom: 6px; font-size: 14.2px; color: var(--ink-soft); break-inside: avoid;}
+.s6 .appt li{position: relative; padding-left: 17px; margin-bottom: 6px; font-size: 17px; color: var(--ink-soft); break-inside: avoid;}
 .s6 .appt li::before{content: ''; position: absolute; left: 0; top: .62em; width: 8px; height: 1px; background: var(--print);}
 @media (max-width: 820px){
 .s6 .appt{grid-template-columns: 34px minmax(0, 1fr);}
 .s6 .appt .dut{grid-column: 1 / -1; border-top: 1px solid var(--rule-soft);}
 }
-.s6 .pub .t{font-family: var(--body); font-size: 15.5px; line-height: 1.42; color: var(--ink);}
-.s6 .pub .a{display: block; margin-top: 4px; color: var(--ink-soft); font-size: 12.5px;}
+.s6 .pub .t{font-family: var(--body); font-size: 18.5px; line-height: 1.42; color: var(--ink);}
+.s6 .pub .a{display: block; margin-top: 4px; color: var(--ink-soft); font-size: 15px;}
 .s6 .pub .v{color: var(--print);}
 .s6 .press-grid{display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));}
 .s6 .press-grid article{padding: 15px var(--gut) 18px; border-right: 1px solid var(--rule-soft); min-width: 0;}
 .s6 .press-grid article:last-child{border-right: none;}
-.s6 .press-grid .src{font: 400 12px/1.5 var(--typed); color: var(--print);}
+.s6 .press-grid .src{font: 400 14px/1.5 var(--typed); color: var(--print);}
 .s6 .press-grid h3{margin: 6px 0 9px; font: 700 clamp(15px, 1.5vw, 18px)/1.22 var(--gothic); letter-spacing: -.005em;}
-.s6 .press-grid blockquote{margin: 0 0 11px; font: 400 14px/1.55 var(--body); color: var(--ink-soft);}
+.s6 .press-grid blockquote{margin: 0 0 11px; font: 400 16.5px/1.55 var(--body); color: var(--ink-soft);}
 .s6 .press-grid blockquote::before{content: '\201C';}
 .s6 .press-grid blockquote::after{content: '\201D';}
-.s6 .press-grid a{font: 700 11px/1 var(--gothic); letter-spacing: .12em; text-transform: uppercase; color: var(--stamp); text-decoration: none;}
+.s6 .press-grid a{font: 700 13px/1 var(--gothic); letter-spacing: .12em; text-transform: uppercase; color: var(--stamp); text-decoration: none;}
 .s6 .press-grid a:hover{text-decoration: underline;}
 @media (max-width: 860px){
 .s6 .press-grid{grid-template-columns: 1fr;}
@@ -275,10 +292,10 @@
 .s6 .method > div{padding: 14px var(--gut) 18px; border-right: 1px solid var(--rule-soft); min-width: 0;}
 .s6 .method > div:last-child{border-right: none;}
 .s6 .method h3{margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--print);
-  font: 700 11px/1.4 var(--gothic); letter-spacing: .18em; text-transform: uppercase; color: var(--print);}
-.s6 .method p{margin: 0 0 11px; font-size: 14px; color: var(--ink-soft);}
+  font: 700 13px/1.4 var(--gothic); letter-spacing: .18em; text-transform: uppercase; color: var(--print);}
+.s6 .method p{margin: 0 0 11px; font-size: 16.5px; color: var(--ink-soft);}
 .s6 .method p b{color: var(--ink); font-weight: 700; font-family: var(--gothic);}
-.s6 .method .k{display: block; font: 400 12px/1.5 var(--typed); color: var(--print);}
+.s6 .method .k{display: block; font: 400 14px/1.5 var(--typed); color: var(--print);}
 @media (max-width: 860px){
 .s6 .method{grid-template-columns: 1fr;}
 .s6 .method > div{border-right: none; border-bottom: 1px solid var(--rule-soft);}
@@ -291,8 +308,8 @@
 .s6 .tk .f{aspect-ratio: 16/10; overflow: hidden; background: var(--top-2); display: block;}
 .s6 .tk img{width: 100%; height: 100%; object-fit: contain;}
 .s6 .tk .m{padding: 10px 13px 13px; border-top: 1px solid var(--rule-soft);}
-.s6 .tk .m b{display: block; font: 700 13px/1.3 var(--gothic); letter-spacing: -.005em;}
-.s6 .tk .m span{display: block; margin-top: 4px; font: 400 12px/1.4 var(--typed); color: var(--ink-soft);}
+.s6 .tk .m b{display: block; font: 700 15.5px/1.3 var(--gothic); letter-spacing: -.005em;}
+.s6 .tk .m span{display: block; margin-top: 4px; font: 400 14px/1.4 var(--typed); color: var(--ink-soft);}
 @media (max-width: 1100px){
 .s6 .tickets{grid-template-columns: repeat(3, minmax(0,1fr));}
 .s6 .tk:nth-child(4n){border-right: 1px solid var(--rule-soft);}
@@ -311,27 +328,27 @@
 .s6 .corr > div:first-child{border-right: none; border-bottom: 1px solid var(--rule-onsheet);}
 }
 .s6 .corr dl{margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 9px 20px;}
-.s6 .corr dt{font: 700 11px/1.7 var(--gothic); letter-spacing: .17em; text-transform: uppercase; color: var(--print);}
-.s6 .corr dd{margin: 0; font: 400 14px/1.5 var(--typed);}
+.s6 .corr dt{font: 700 13px/1.7 var(--gothic); letter-spacing: .17em; text-transform: uppercase; color: var(--print);}
+.s6 .corr dd{margin: 0; font: 400 16.5px/1.5 var(--typed);}
 .s6 form{display: grid; gap: 12px;}
 .s6 .fld{display: grid; gap: 5px;}
-.s6 .fld label{font: 700 11px/1.4 var(--gothic); letter-spacing: .17em; text-transform: uppercase; color: var(--print);}
-.s6 .fld input,.s6 .fld textarea{font: 400 15px/1.5 var(--typed); color: var(--ink);
+.s6 .fld label{font: 700 13px/1.4 var(--gothic); letter-spacing: .17em; text-transform: uppercase; color: var(--print);}
+.s6 .fld input,.s6 .fld textarea{font: 400 17.5px/1.5 var(--typed); color: var(--ink);
   background: var(--top); border: 1px solid var(--rule); border-radius: 0;
   padding: 10px 12px; width: 100%;}
 .s6 .fld textarea{resize: vertical; min-height: 110px;}
 .s6 .fld input::placeholder,.s6 .fld textarea::placeholder{color: var(--ink-soft); opacity: .7;}
 .s6 .fld input:focus-visible,.s6 .fld textarea:focus-visible{border-color: var(--stamp);}
-.s6 .note{margin: 0; font: 400 12px/1.5 var(--typed); color: var(--ink-soft);}
-.s6 .err{color: var(--stamp); font: 400 12px/1.5 var(--typed);}
+.s6 .note{margin: 0; font: 400 14px/1.5 var(--typed); color: var(--ink-soft);}
+.s6 .err{color: var(--stamp); font: 400 14px/1.5 var(--typed);}
 .s6 .foot{padding: 14px var(--gut) 40px; display: flex; flex-wrap: wrap; gap: 6px 26px; justify-content: space-between;
-  font: 400 12px/1.6 var(--typed); color: var(--ink-soft);}
+  font: 400 14px/1.6 var(--typed); color: var(--ink-soft);}
 .s6 .intro{display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, 330px);}
-.s6 .intro-text{padding: 20px var(--gut) 24px; font-size: 18.5px; line-height: 1.6; color: var(--ink);}
+.s6 .intro-text{padding: 20px var(--gut) 24px; font-size: 22px; line-height: 1.6; color: var(--ink);}
 .s6 .intro-text p{margin: 0 0 14px; break-inside: avoid;}
 .s6 .intro-text p:last-child{margin-bottom: 0;}
 .s6 .obs{margin: 0; border-left: 1px solid var(--ink); background: var(--top); display: flex; flex-direction: column;}
-.s6 .obs .lab{padding: 9px 14px 8px; border-bottom: 1px solid var(--rule); font: 700 11px/1.4 var(--gothic); letter-spacing: .14em; text-transform: uppercase; color: var(--print);}
+.s6 .obs .lab{padding: 9px 14px 8px; border-bottom: 1px solid var(--rule); font: 700 13px/1.4 var(--gothic); letter-spacing: .14em; text-transform: uppercase; color: var(--print);}
 .s6 .obs img{width: 100%; height: auto; aspect-ratio: 4 / 3; flex: none; object-fit: cover; object-position: 50% 30%;}
 @media (max-width: 860px){
 .s6 .intro{grid-template-columns: 1fr;}
@@ -341,9 +358,9 @@
 .s6 button.tk{border: none; border-right: 1px solid var(--rule-soft); border-top: 1px solid var(--rule-soft); padding: 0; background: var(--top);}
 .s6 button.tk:hover{background: rgba(6,63,81,.06);}
 .s6 .dlg-bar{display: flex; align-items: baseline; gap: 14px; background: var(--ink); color: var(--sheet); padding: 12px var(--gut); flex: none;}
-.s6 .dlg-bar .no{font: 700 12px/1 var(--typed); opacity: .78;}
+.s6 .dlg-bar .no{font: 700 14px/1 var(--typed); opacity: .78;}
 .s6 .dlg-bar h2{margin: 0; font: 700 clamp(16px, 2vw, 21px)/1.1 var(--gothic); letter-spacing: .04em; text-transform: uppercase;}
-.s6 .dlg-x{margin-left: auto; font: 700 11px/1 var(--gothic); letter-spacing: .14em; text-transform: uppercase;
+.s6 .dlg-x{margin-left: auto; font: 700 13px/1 var(--gothic); letter-spacing: .14em; text-transform: uppercase;
   color: var(--ink); background: var(--sheet); border: none; padding: 9px 13px; cursor: pointer;}
 .s6 .dlg-x:hover{background: var(--stamp); color: var(--sheet);}
 .s6 .dlg-body{overflow-y: auto;}
@@ -351,15 +368,15 @@
 .s6 .dlg-cert{background: var(--top-2); border-bottom: 1px solid var(--ink); padding: 18px;}
 .s6 .dlg-cert img{width: 100%; max-height: 62dvh; object-fit: contain;}
 .s6 .dlg-meta{padding: 16px var(--gut) 4px;}
-.s6 .dlg-kind{margin: 0 0 8px; font: 400 13px/1.5 var(--typed); color: var(--ink-soft);}
+.s6 .dlg-kind{margin: 0 0 8px; font: 400 15.5px/1.5 var(--typed); color: var(--ink-soft);}
 .s6 .dlg-kind span{color: var(--print);}
-.s6 .dlg-lede{margin: 0; font: 400 17px/1.55 var(--body); color: var(--ink); max-width: 68ch;}
+.s6 .dlg-lede{margin: 0; font: 400 20px/1.55 var(--body); color: var(--ink); max-width: 68ch;}
 .s6 .dlg-secs{display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin-top: 12px; border-top: 1px solid var(--rule);}
 .s6 .dlg-secs section{padding: 14px var(--gut) 16px; border-bottom: 1px solid var(--rule-soft); min-width: 0;}
 .s6 .dlg-secs section:nth-child(odd){border-right: 1px solid var(--rule-soft);}
-.s6 .dlg-secs h3{margin: 0 0 7px; padding-bottom: 7px; border-bottom: 1px solid var(--print); font: 700 11px/1.4 var(--gothic); letter-spacing: .14em; text-transform: uppercase; color: var(--print);}
-.s6 .dlg-secs p{margin: 0; font: 400 14.5px/1.6 var(--body); color: var(--ink-soft);}
-.s6 .dlg-secs .slot{font: 400 12.5px/1.5 var(--typed); color: var(--ink-soft); opacity: .8;}
+.s6 .dlg-secs h3{margin: 0 0 7px; padding-bottom: 7px; border-bottom: 1px solid var(--print); font: 700 13px/1.4 var(--gothic); letter-spacing: .14em; text-transform: uppercase; color: var(--print);}
+.s6 .dlg-secs p{margin: 0; font: 400 17px/1.6 var(--body); color: var(--ink-soft);}
+.s6 .dlg-secs .slot{font: 400 15px/1.5 var(--typed); color: var(--ink-soft); opacity: .8;}
 .s6 .dlg-foot{padding: 14px var(--gut) 18px;}
 .s6 .dlg-foot .btn{width: auto;}
 @media (max-width: 640px){
@@ -368,7 +385,7 @@
 }
 .s6 .sched.on-top{--print: #0b6f8a; --rule: rgba(11,111,138,.42); --rule-soft: rgba(11,111,138,.22);}
 .s6 .colhead{display: grid; align-items: end; border-bottom: 1px solid var(--print);}
-.s6 .colhead > span{padding: 9px var(--gut) 7px; font: 700 11px/1.35 var(--gothic); letter-spacing: .14em; text-transform: uppercase; color: var(--print);}
+.s6 .colhead > span{padding: 9px var(--gut) 7px; font: 700 15px/1.35 var(--gothic); letter-spacing: .12em; text-transform: uppercase; color: var(--print);}
 .s6 .portal-cols{grid-template-columns: 44px minmax(0, 280px) minmax(0, 1fr) minmax(0, 260px);}
 .s6 .appt-cols{grid-template-columns: 44px minmax(0, 230px) minmax(0, 1fr);}
 .s6 .press-cols{grid-template-columns: minmax(0, 220px) minmax(0, 170px) minmax(0, 1fr);}
@@ -379,7 +396,7 @@
 .s6 .portal .pbtn:hover,.s6 .portal:hover .pbtn{text-decoration: underline; text-decoration-color: var(--stamp); text-underline-offset: 4px;}
 .s6 .portal h3{margin: 0 0 4px; font: 700 clamp(17px, 1.9vw, 23px)/1.1 var(--gothic); letter-spacing: -.01em;}
 .s6 .portal .desc{display: flex; flex-direction: column; gap: 10px;}
-.s6 .portal .more{margin-top: auto; font: 700 11px/1 var(--gothic); letter-spacing: .14em; text-transform: uppercase; color: var(--stamp);}
+.s6 .portal .more{margin-top: auto; font: 700 13px/1 var(--gothic); letter-spacing: .14em; text-transform: uppercase; color: var(--stamp);}
 @media (max-width: 660px){
 .s6 .portal > *{border-right: none;}
 }
@@ -390,13 +407,13 @@
 .s6 .press-rows .prow:last-child{border-bottom: none;}
 .s6 .press-rows .prow > *{padding: 14px var(--gut) 16px; border-right: 1px solid var(--rule-soft); min-width: 0;}
 .s6 .press-rows .prow > *:last-child{border-right: none;}
-.s6 .press-rows .src{font: 700 15px/1.3 var(--gothic); color: var(--print);}
-.s6 .press-rows .dt{font: 400 12.5px/1.5 var(--typed); color: var(--ink-soft);}
+.s6 .press-rows .src{font: 700 17.5px/1.3 var(--gothic); color: var(--print);}
+.s6 .press-rows .dt{font: 400 15px/1.5 var(--typed); color: var(--ink-soft);}
 .s6 .press-rows h3{margin: 0 0 8px; font: 700 clamp(16px, 1.6vw, 19px)/1.25 var(--gothic); letter-spacing: -.005em;}
-.s6 .press-rows blockquote{margin: 0 0 10px; font: 400 14.5px/1.55 var(--body); color: var(--ink-soft); max-width: 78ch;}
+.s6 .press-rows blockquote{margin: 0 0 10px; font: 400 17px/1.55 var(--body); color: var(--ink-soft); max-width: 78ch;}
 .s6 .press-rows blockquote::before{content:'\201C'}
 .s6 .press-rows blockquote::after{content:'\201D'}
-.s6 .press-rows a{font: 700 11px/1 var(--gothic); letter-spacing: .12em; text-transform: uppercase; color: var(--stamp); text-decoration: none;}
+.s6 .press-rows a{font: 700 13px/1 var(--gothic); letter-spacing: .12em; text-transform: uppercase; color: var(--stamp); text-decoration: none;}
 .s6 .press-rows a:hover{text-decoration: underline;}
 @media (max-width: 860px){
 .s6 .press-rows .prow{grid-template-columns: 1fr;}
@@ -408,14 +425,14 @@
 .s6 .cell > a.val:hover{color: var(--stamp); text-decoration: underline; text-underline-offset: 4px;}
 .s6 .corr > div:first-child{display: flex; flex-direction: column;}
 .s6 .cv-foot{margin-top: auto; width: auto; align-self: flex-start;}
-.s6 .cell:not(.c-name) > .val:not(.big){font-family: var(--body); font-size: 16px;}
+.s6 .cell:not(.c-name) > .val:not(.big){font-family: var(--body); font-size: 19px;}
 .s6 .pl .pc,.s6 .meth,.s6 .press-rows .dt.x,.s6 .note,.s6 .foot,.s6 .sched-head .of,.s6 .plate-cap span,.s6 .method p,.s6 .dlg-kind{font-family: var(--body);}
-.s6 .pl .pc{font-size: 13px;}
-.s6 .meth{font-size: 14px;}
-.s6 .note{font-size: 12.5px;}
-.s6 .foot,.s6 .sched-head .of{font-size: 12.5px;}
-.s6 .plate-cap span{font-size: 12.5px;}
-.s6 .corr dd{font-family: var(--body); font-size: 15px;}
+.s6 .pl .pc{font-size: 15.5px;}
+.s6 .meth{font-size: 16.5px;}
+.s6 .note{font-size: 15px;}
+.s6 .foot,.s6 .sched-head .of{font-size: 16.5px;}
+.s6 .plate-cap span{font-size: 15px;}
+.s6 .corr dd{font-family: var(--body); font-size: 17.5px;}
 @media (max-width: 900px){
 .s6 .margin a .ml{display: block;}
 .s6 .margin a{padding-block: 6px;}
@@ -434,27 +451,27 @@
 .s6 .stations > div:first-child{display: flex; flex-direction: column;}
 
 .s6 .s6-bar{position:sticky;top:0;z-index:60;height:45px;box-sizing:border-box;display:flex;align-items:center;gap:16px;background:var(--ink);color:var(--sheet);padding:8px var(--gut);border-bottom:1px solid var(--sheet-deep)}
-.s6 .s6-bar span{font:700 12px/1 var(--gothic);letter-spacing:.16em;text-transform:uppercase}
-.s6 .s6-bar button{margin-left:auto;cursor:pointer;background:transparent;color:var(--sheet);border:1px solid rgba(227,178,60,.5);padding:8px 12px;font:700 11px/1 var(--gothic);letter-spacing:.14em;text-transform:uppercase}
+.s6 .s6-bar span{font:700 14px/1 var(--gothic);letter-spacing:.16em;text-transform:uppercase}
+.s6 .s6-bar button{margin-left:auto;cursor:pointer;background:transparent;color:var(--sheet);border:1px solid rgba(227,178,60,.5);padding:8px 12px;font:700 13px/1 var(--gothic);letter-spacing:.14em;text-transform:uppercase}
 .s6 .s6-bar button:hover{background:var(--sheet);color:var(--ink)}
 .s6 .thead{display:grid;align-items:end;border-bottom:1px solid var(--print)}
-.s6 .thead>span{white-space:nowrap;padding:9px var(--gut) 7px;font:700 11px/1.35 var(--gothic);letter-spacing:.14em;text-transform:uppercase;color:var(--print)}
-.s6 .trow{display:grid;align-items:center;border-bottom:1px solid var(--rule-soft);font:400 14px/1.45 var(--typed);color:var(--ink)}
+.s6 .thead>span{white-space:nowrap;padding:9px var(--gut) 7px;font:700 13px/1.35 var(--gothic);letter-spacing:.14em;text-transform:uppercase;color:var(--print)}
+.s6 .trow{display:grid;align-items:center;border-bottom:1px solid var(--rule-soft);font:400 16.5px/1.45 var(--typed);color:var(--ink)}
 .s6 .trow:last-child{border-bottom:none}
 .s6 .trow>*{padding:11px var(--gut) 12px;min-width:0}
 .s6 .trow:hover{background:rgba(6,63,81,.05)}
 .s6 .st-grid{grid-template-columns:44px minmax(0,1.3fr) 108px 108px minmax(0,1.4fr)}
 .s6 .pb-grid{grid-template-columns:44px minmax(0,1fr) 88px}
-.s6 .trow .rn{font:400 12px/1.5 var(--typed);color:var(--ink-soft)}
-.s6 .trow .nm{font:700 16px/1.25 var(--gothic);letter-spacing:.01em}
-.s6 .trow .meth{font:400 14px/1.4 var(--body)}
+.s6 .trow .rn{font:400 14px/1.5 var(--typed);color:var(--ink-soft)}
+.s6 .trow .nm{font:700 19px/1.25 var(--gothic);letter-spacing:.01em}
+.s6 .trow .meth{font:400 16.5px/1.4 var(--body)}
 .s6 .stations>div:first-child{display:flex;flex-direction:column;min-width:0;overflow-x:auto}
 .s6 .stations .tin{min-width:520px;flex:1 1 auto;display:flex;flex-direction:column}
 .s6 .stations .tin .trow{flex:1 1 auto}
 .s6 .pubs-wrap{overflow-x:auto}
 .s6 .pubs-wrap .tin{min-width:460px}
-.s6 .pub .t{display:block;font:400 15.5px/1.42 var(--body);color:var(--ink)}
-.s6 .pub .a{display:block;margin-top:4px;color:var(--ink-soft);font:400 12.5px/1.5 var(--body)}
+.s6 .pub .t{display:block;font:400 18.5px/1.42 var(--body);color:var(--ink)}
+.s6 .pub .a{display:block;margin-top:4px;color:var(--ink-soft);font:400 15px/1.5 var(--body)}
 .s6 .pub .v{color:var(--print)}
 .s6 .map-lab{font:400 11px var(--typed);fill:var(--ink)}
 .s6 .s6-ov{position:fixed;inset:0;z-index:95;background:rgba(22,35,63,.84);display:flex;align-items:center;justify-content:center;padding:14px}
@@ -477,11 +494,11 @@
 .s6 .dlg-secs{display:block}
 .s6 .dlg-secs section{display:grid;grid-template-columns:190px minmax(0,1fr);gap:0 var(--gut);border-right:none !important}
 .s6 .dlg-secs h3{border-bottom:none;padding-bottom:0;margin:0}
-.s6 .dlg-secs .txt p{margin:0 0 12px;font:400 14.5px/1.65 var(--body);color:var(--ink-soft);max-width:72ch}
+.s6 .dlg-secs .txt p{margin:0 0 12px;font:400 17px/1.65 var(--body);color:var(--ink-soft);max-width:72ch}
 .s6 .dlg-secs .txt p:last-child{margin-bottom:0}
 .s6 .rb{font-weight:700;color:var(--ink)}
 .s6 .ri{font-style:italic}
-.s6 .dlg-note{margin:10px 0 0;font:400 12.5px/1.5 var(--body);color:var(--ink-soft)}
+.s6 .dlg-note{margin:10px 0 0;font:400 15px/1.5 var(--body);color:var(--ink-soft)}
 @media (max-width:640px){.s6 .dlg-secs section{grid-template-columns:1fr;gap:8px}}
 .s6 a.portal{text-decoration:none;color:inherit}
 .s6 a.portal:hover h3{text-decoration:underline;text-decoration-color:var(--stamp);text-underline-offset:4px}
@@ -531,9 +548,9 @@
     <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:flex-end; justify-content:space-between; padding-bottom:18px; border-bottom:2px solid rgba(26,28,25,.5)">
       <div style="display:flex; flex-direction:column; gap:8px">
         <h1 style="font-family:'Libre Baskerville', Georgia, serif; font-size:clamp(38px, 4.4vw, 54px); font-weight:700; margin:0; letter-spacing:-.02em; line-height:1">Nikunj Jambu</h1>
-        <p style="margin:0; font-family:'Space Mono', monospace; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:#7a2f2f; text-wrap:balance">Conservation Biologist · Spatial Ecologist · MEL Specialist</p>
+        <p style="margin:0; font-family:'Space Mono', monospace; font-size:13.5px; letter-spacing:.14em; text-transform:uppercase; color:#7a2f2f; text-wrap:balance">Conservation Biologist · Spatial Ecologist · MEL Specialist</p>
       </div>
-      <dl style="margin:0; flex:0 0 auto; display:grid; grid-template-columns:auto minmax(150px, auto); gap:8px 18px; align-items:baseline; line-height:1.5; font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase">
+      <dl style="margin:0; flex:0 0 auto; display:grid; grid-template-columns:auto minmax(150px, auto); gap:8px 18px; align-items:baseline; line-height:1.5; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase">
         <dt style="color:#8b8e86; white-space:nowrap">Sheet</dt><dd style="margin:0; color:#1a1c19; line-height:1.5; white-space:nowrap">01 · Field record</dd>
         <dt style="color:#8b8e86; white-space:nowrap">Period</dt><dd style="margin:0; color:#1a1c19; line-height:1.5; white-space:nowrap">2009 — 2026</dd>
         <dt style="color:#8b8e86; white-space:nowrap">Datum</dt><dd style="margin:0; color:#1a1c19; line-height:1.5; white-space:nowrap">WGS 84 · Mercator</dd>
@@ -544,18 +561,18 @@
     <div style="display:flex; flex-wrap:wrap; gap:48px; padding:26px 0 30px; border-bottom:1px solid rgba(26,28,25,.32); align-items:stretch">
       <div style="flex:1 1 340px; display:flex; flex-direction:column; gap:26px; min-width:0">
         <p style="max-width:36ch; margin:0; font-family:'Libre Baskerville', Georgia, serif; font-size:clamp(20px, 2.2vw, 34px); line-height:1.5; color:#26291f; text-wrap:pretty">Thirteen years of wildlife research, spatial analysis and monitoring systems across India — and the field tools built to carry that work further.</p>
-        <a href="#sheet-index" style="display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; margin:-8px 0 0; padding:11px 14px; border-left:2px solid #7a2f2f; background:rgba(122,47,47,.05); font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:.1em; line-height:1.75; color:#5c5f57; text-transform:uppercase"><span style="color:#7a2f2f">Start here</span><span style="text-transform:none; letter-spacing:.02em; font-size:12px; line-height:1.6">The full CV and portfolio is at the bottom of this page, laid out in four designs — same record, four readings. Pick whichever one you prefer.</span><span style="color:#7a2f2f">Jump to the four designs ↓</span></a>
+        <a href="#sheet-index" style="display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; margin:-8px 0 0; padding:11px 14px; border-left:2px solid #7a2f2f; background:rgba(122,47,47,.05); font-family:'Space Mono', monospace; font-size:12.5px; letter-spacing:.1em; line-height:1.75; color:#5c5f57; text-transform:uppercase"><span style="color:#7a2f2f">Start here</span><span style="text-transform:none; letter-spacing:.02em; font-size:14px; line-height:1.6">My CV and everything I&#8217;ve built are at the bottom of this page. There are four layouts. They all hold the same content, so pick the one you like reading.</span><span style="color:#7a2f2f">See the CV ↓</span></a>
 
         <div style="flex:1 1 auto; min-height:0; border:1px solid rgba(26,28,25,.28); background:rgba(251,250,245,.9); backdrop-filter:blur(3px); padding:16px 18px; display:flex; flex-direction:column; gap:12px; font-family:'Space Mono', monospace">
-      <div style="display:flex; align-items:center; gap:8px; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color:#7a7d76">
+      <div style="display:flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#7a7d76">
         <span data-motion="" style="width:6px; height:6px; border-radius:50%; background:#7a2f2f; animation:blink 1.8s ease-in-out infinite"></span>
         <span style="white-space:nowrap">Survey log · live</span>
       </div>
-      <div style="display:flex; gap:14px; font-size:13px; color:#1a1c19">
+      <div style="display:flex; gap:14px; font-size:15.5px; color:#1a1c19">
         <span style="white-space:nowrap">{{ wpLat }}</span>
         <span style="white-space:nowrap">{{ wpLon }}</span>
       </div>
-      <div style="font-size:11.5px; line-height:1.5; color:#4a4d47">{{ wpPlace }}<br />{{ wpNote }}</div>
+      <div style="font-size:13.5px; line-height:1.5; color:#4a4d47">{{ wpPlace }}<br />{{ wpNote }}</div>
       <div style="flex:1 1 auto; min-height:34px; display:flex; align-items:flex-end; gap:5px; margin-top:2px">
         <span data-motion="" style="flex:1; height:40%; background:#3f6b4a; opacity:.75; transform-origin:bottom; animation:barGrow 4.6s ease-in-out infinite"></span>
         <span data-motion="" style="flex:1; height:72%; background:#3f6b4a; opacity:.75; transform-origin:bottom; animation:barGrow 4.6s ease-in-out .3s infinite"></span>
@@ -565,40 +582,40 @@
         <span data-motion="" style="flex:1; height:34%; background:#3f6b4a; opacity:.75; transform-origin:bottom; animation:barGrow 4.6s ease-in-out 1.5s infinite"></span>
         <span data-motion="" style="flex:1; height:80%; background:#3f6b4a; opacity:.75; transform-origin:bottom; animation:barGrow 4.6s ease-in-out 1.8s infinite"></span>
       </div>
-      <div style="font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:#8b8e86">Detections per hour</div>
+      <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8b8e86">Detections per hour</div>
         </div>
 
         <div style="padding-top:22px; border-top:1px solid rgba(26,28,25,.28); display:flex; flex-direction:column; gap:14px">
-          <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">Legend · survey methods</span>
+          <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">Legend · survey methods</span>
           <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap:14px 24px">
             <div style="display:flex; align-items:center; gap:9px">
               <svg viewBox="0 0 26 18" aria-hidden="true" style="width:26px; height:18px; flex:none"><path d="M 13 4 V 8 M 13 14 V 10 M 4 9 H 8 M 22 9 H 18" stroke="#7a2f2f" stroke-width="1.2"></path><circle cx="13" cy="9" r="2.6" fill="#7a2f2f"></circle><circle cx="13" cy="9" r="7" fill="none" stroke="#7a2f2f" stroke-width="1" opacity=".5"></circle></svg>
-              <span style="font-size:11.5px; line-height:1.3; color:#4a4d47">Field station · logged survey site</span>
+              <span style="font-size:13.5px; line-height:1.3; color:#4a4d47">Field station · logged survey site</span>
             </div>
             <div style="display:flex; align-items:center; gap:9px">
               <svg viewBox="0 0 26 18" aria-hidden="true" style="width:26px; height:18px; flex:none"><path d="M 1 14 C 7 12, 9 6, 16 5 S 23 7, 25 4" stroke="#7a2f2f" stroke-width="1.4" stroke-dasharray="4 4" fill="none"></path></svg>
-              <span style="font-size:11.5px; line-height:1.3; color:#4a4d47">Line transect · walked route</span>
+              <span style="font-size:13.5px; line-height:1.3; color:#4a4d47">Line transect · walked route</span>
             </div>
             <div style="display:flex; align-items:center; gap:9px">
               <svg viewBox="0 0 26 18" aria-hidden="true" style="width:26px; height:18px; flex:none"><rect x="7" y="4" width="12" height="10" rx="2" fill="#1a1c19"></rect><circle cx="13" cy="9" r="3" fill="#3c4b36"></circle><path d="M 19 9 L 25 5 M 19 9 L 25 13" stroke="#7a2f2f" stroke-width="1" stroke-dasharray="3 3" fill="none"></path></svg>
-              <span style="font-size:11.5px; line-height:1.3; color:#4a4d47">Camera trap · passive detection</span>
+              <span style="font-size:13.5px; line-height:1.3; color:#4a4d47">Camera trap · passive detection</span>
             </div>
             <div style="display:flex; align-items:center; gap:9px">
               <svg viewBox="0 0 26 18" aria-hidden="true" style="width:26px; height:18px; flex:none"><rect x="4" y="3" width="18" height="12" fill="none" stroke="#3f6b4a" stroke-width="1.2"></rect><path d="M 10 3 V 15 M 16 3 V 15 M 4 9 H 22" stroke="#3f6b4a" stroke-width=".7"></path></svg>
-              <span style="font-size:11.5px; line-height:1.3; color:#4a4d47">Vegetation quadrat · 1×1 m plot</span>
+              <span style="font-size:13.5px; line-height:1.3; color:#4a4d47">Vegetation quadrat · 1×1 m plot</span>
             </div>
             <div style="display:flex; align-items:center; gap:9px">
               <svg viewBox="0 0 26 18" aria-hidden="true" style="width:26px; height:18px; flex:none"><path d="M 2 12 Q 7 4 12 12" stroke="#243021" stroke-width="1.4" fill="none"></path><path d="M 14 8 Q 19 1 24 8" stroke="#243021" stroke-width="1.4" fill="none"></path></svg>
-              <span style="font-size:11.5px; line-height:1.3; color:#4a4d47">Point count · bioacoustic recording</span>
+              <span style="font-size:13.5px; line-height:1.3; color:#4a4d47">Point count · bioacoustic recording</span>
             </div>
             <div style="display:flex; align-items:center; gap:9px">
               <svg viewBox="0 0 26 18" aria-hidden="true" style="width:26px; height:18px; flex:none"><path d="M 3 15 V 6 M 3 6 H 12 M 3 10 H 10" stroke="#3f6b4a" stroke-width="1.2" fill="none"></path><rect x="15" y="4" width="3" height="11" fill="#3f6b4a"></rect><rect x="20" y="8" width="3" height="7" fill="#7a2f2f"></rect></svg>
-              <span style="font-size:11.5px; line-height:1.3; color:#4a4d47">Spatial analysis · GIS &amp; modelling</span>
+              <span style="font-size:13.5px; line-height:1.3; color:#4a4d47">Spatial analysis · GIS &amp; modelling</span>
             </div>
           </div>
         </div>
 
-        <dl style="margin:0; padding-top:20px; border-top:1px solid rgba(26,28,25,.22); display:grid; grid-template-columns:repeat(auto-fit, minmax(min(330px, 100%), 1fr)); gap:9px 26px; font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.08em; line-height:1.5; color:#6d706a">
+        <dl style="margin:0; padding-top:20px; border-top:1px solid rgba(26,28,25,.22); display:grid; grid-template-columns:repeat(auto-fit, minmax(min(330px, 100%), 1fr)); gap:9px 26px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.08em; line-height:1.5; color:#6d706a">
           <div style="min-width:0; display:flex; gap:12px">
             <dt style="flex:0 0 76px; text-transform:uppercase; color:#8b8e86">Outline</dt>
             <dd style="margin:0; min-width:0">Survey of India depiction · supplied shapefile</dd>
@@ -620,7 +637,7 @@
 
 
       <div style="flex:1 1 400px; max-width:566px; display:flex; flex-direction:column; gap:12px; min-width:0">
-        <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px; font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">
           <span style="color:#3f6b4a; white-space:nowrap">Plan · field stations</span><span style="white-space:nowrap">Survey of India outline</span>
         </div>
         <figure style="position:relative; margin:0; border:1px solid rgba(26,28,25,.3); background:rgba(251,250,245,.72); padding:14px 14px 12px">
@@ -644,7 +661,7 @@
     </sc-for>
     {{ gpsLabelNodes }}
   </svg>
-          <figcaption style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:baseline; margin-top:8px; font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:#6d706a">
+          <figcaption style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:baseline; margin-top:8px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#6d706a">
             <span>Field stations · 2009—2026</span>
             <span style="color:#7a2f2f">{{ wpPlace }}</span>
           </figcaption>
@@ -657,49 +674,49 @@
               <span style="width:{{ barQuarterPx }}; height:8px; background:#1a1c19; border:1px solid #1a1c19; border-left:none"></span>
               <span style="width:{{ barQuarterPx }}; height:8px; background:transparent; border:1px solid #1a1c19; border-left:none"></span>
             </div>
-            <div style="display:flex; justify-content:space-between; width:{{ barFullPx }}; font-size:8.5px; letter-spacing:.1em; color:#4a4d47">
+            <div style="display:flex; justify-content:space-between; width:{{ barFullPx }}; font-size:12px; letter-spacing:.1em; color:#4a4d47">
               <span>0</span><span>{{ barMidLabel }}</span><span>{{ barLabel }}</span>
             </div>
           </div>
-          <span style="font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:#8b8e86; padding-bottom:14px">Web Mercator · true at 22° N</span>
+          <span style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8b8e86; padding-bottom:14px">Web Mercator · true at 22° N</span>
         </div>
       </div>
     </div>
 
     <div style="padding:24px 0 26px; border-bottom:1px solid rgba(26,28,25,.32); display:flex; flex-direction:column; gap:16px">
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between; align-items:baseline">
-        <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">Field data &amp; models · machine learning in conservation</span>
-        <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">{{ pipelineStage }}</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">Field data &amp; models · machine learning in conservation</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">{{ pipelineStage }}</span>
       </div>
 
       <div style="display:flex; flex-wrap:wrap; gap:6px; align-items:center">
         <sc-for list="{{ pipeline }}" as="p" hint-placeholder-count="5">
           <span style="display:flex; align-items:center; gap:6px">
-            <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; border:1px solid {{ p.border }}; background:{{ p.bg }}; color:{{ p.ink }}; padding:5px 9px">{{ p.label }}</span>
-            <span style="font-family:'Space Mono', monospace; font-size:10px; color:#a9aba3">{{ p.sep }}</span>
+            <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; border:1px solid {{ p.border }}; background:{{ p.bg }}; color:{{ p.ink }}; padding:5px 9px">{{ p.label }}</span>
+            <span style="font-family:'Space Mono', monospace; font-size:12px; color:#a9aba3">{{ p.sep }}</span>
           </span>
         </sc-for>
       </div>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap:20px; align-items:stretch">
         <div style="display:flex; flex-direction:column; gap:9px; justify-content:space-between">
-          <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:#8b8e86">Classifier output · top-3</span>
+          <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8b8e86">Classifier output · top-3</span>
           <sc-for list="{{ inferences }}" as="r" hint-placeholder-count="3">
             <div style="display:flex; flex-direction:column; gap:3px">
               <div style="display:flex; justify-content:space-between; align-items:baseline; gap:10px">
-                <span style="font-size:12.5px; color:{{ r.ink }}"><em>{{ r.taxon }}</em></span>
-                <span style="font-family:'Space Mono', monospace; font-size:10.5px; color:{{ r.mark }}">{{ r.pct }}</span>
+                <span style="font-size:15px; color:{{ r.ink }}"><em>{{ r.taxon }}</em></span>
+                <span style="font-family:'Space Mono', monospace; font-size:12.5px; color:{{ r.mark }}">{{ r.pct }}</span>
               </div>
               <div style="height:4px; background:rgba(26,28,25,.1)">
                 <div style="height:4px; width:{{ r.pct }}; background:{{ r.mark }}"></div>
               </div>
             </div>
           </sc-for>
-          <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.1em; color:#8b8e86">{{ inferenceSource }}</span>
+          <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.1em; color:#8b8e86">{{ inferenceSource }}</span>
           <div style="padding-top:15px; border-top:1px solid rgba(26,28,25,.16); display:flex; flex-direction:column; gap:11px">
-            <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:#3f6b4a">{{ stageDoing }} &middot; {{ stageLabel }}</span>
-            <p style="margin:0; font-size:13px; line-height:1.7; color:#4a4d47; text-wrap:pretty">{{ stageWhat }}</p>
-            <dl style="margin:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap:8px 26px; font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.08em; line-height:1.5; color:#6d706a">
+            <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#3f6b4a">{{ stageDoing }} &middot; {{ stageLabel }}</span>
+            <p style="margin:0; font-size:15.5px; line-height:1.7; color:#4a4d47; text-wrap:pretty">{{ stageWhat }}</p>
+            <dl style="margin:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap:8px 26px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.08em; line-height:1.5; color:#6d706a">
               <div style="min-width:0; display:flex; gap:12px"><dt style="flex:0 0 46px; text-transform:uppercase; color:#8b8e86">In</dt><dd style="margin:0; min-width:0">{{ stageIn }}</dd></div>
               <div style="min-width:0; display:flex; gap:12px"><dt style="flex:0 0 46px; text-transform:uppercase; color:#8b8e86">Out</dt><dd style="margin:0; min-width:0">{{ stageOut }}</dd></div>
               <div style="grid-column:1 / -1; min-width:0; display:flex; gap:12px"><dt style="flex:0 0 46px; text-transform:uppercase; color:#8b8e86">Tools</dt><dd style="margin:0; min-width:0">{{ stageTool }}</dd></div>
@@ -708,7 +725,7 @@
         </div>
 
         <div style="display:flex; flex-direction:column; gap:9px">
-          <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:#8b8e86">{{ panelTitle }}</span>
+          <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8b8e86">{{ panelTitle }}</span>
 
           <sc-if value="{{ isAcoustic }}" hint-placeholder-val="{{ true }}">
           <svg viewBox="0 0 560 210" aria-hidden="true" style="display:block; width:100%; height:auto; border:1px solid rgba(26,28,25,.2); background:#f4f2e9">
@@ -746,7 +763,7 @@
           </svg>
           </sc-if>
 
-          <div style="display:flex; justify-content:space-between; gap:14px; font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.1em; color:#8b8e86">
+          <div style="display:flex; justify-content:space-between; gap:14px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.1em; color:#8b8e86">
             <span style="flex:0 0 auto">{{ specWindow }}</span><span style="text-align:right; min-width:0">{{ specModel }}</span>
           </div>
         </div>
@@ -754,7 +771,7 @@
     </div>
 
     <div style="padding:24px 0 26px; border-bottom:1px solid rgba(26,28,25,.32); display:flex; flex-direction:column; gap:12px">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px; font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">
         <span style="color:#3f6b4a; white-space:nowrap">Profile · transect walk</span><span style="white-space:nowrap">1:25,000</span>
       </div>
     <div style="position:relative; height:250px; margin:0; border:1px solid rgba(26,28,25,.32); background:linear-gradient(#e9e7d7 0%, #efeadd 62%); overflow:hidden">
@@ -896,7 +913,7 @@
           <span style="width:38px; height:8px; background:#1a1c19; border:1px solid #1a1c19; border-left:none"></span>
           <span style="width:38px; height:8px; background:#efeadd; border:1px solid #1a1c19; border-left:none"></span>
         </div>
-        <div style="display:flex; justify-content:space-between; width:152px; font-size:8.5px; letter-spacing:.1em; color:#4a4d47"><span>0</span><span>250</span><span>500 m</span></div>
+        <div style="display:flex; justify-content:space-between; width:152px; font-size:12px; letter-spacing:.1em; color:#4a4d47"><span>0</span><span>250</span><span>500 m</span></div>
       </div>
 
       
@@ -904,11 +921,11 @@
     </div>
 
     <div id="sheet-index" style="scroll-margin-top:18px; padding:24px 0 0; display:flex; flex-direction:column; gap:16px">
-      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:14px; font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">
-        <span style="color:#3f6b4a">Sheet index · four readings of the same record</span>
-        <span style="text-align:right">Same CV and portfolio in each · switch from the header at any time</span>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:14px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">
+        <span style="color:#3f6b4a">Your CV is in each of these. Choose a layout to read it. The content is identical, only the look changes.</span>
+        <span style="text-align:right">You can switch layouts from the top bar at any time.</span>
       </div>
-    <div style="display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:16px">
+    <div class="ch-grid" style="display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:16px">
       <div role="button" tabindex="0" onClick="{{ goSchedule }}" style="cursor:pointer; border:1px solid rgba(26,28,25,.3); background:rgba(251,250,245,.9); backdrop-filter:blur(3px); padding:16px; display:flex; flex-direction:column; gap:16px; transition:transform .18s ease, box-shadow .18s ease" style-hover="transform:translateY(-4px); box-shadow:0 14px 30px rgba(26,28,25,.13)">
         <div style="height:132px; background:#e3b23c; border:1px solid rgba(22,35,63,.4); display:flex; flex-direction:column">
           <div style="height:30px; background:#16233f; display:flex; align-items:center; padding:0 10px; gap:8px"><span style="width:44px; height:6px; background:#e3b23c"></span><span style="margin-left:auto; width:26px; height:4px; background:rgba(227,178,60,.6)"></span></div>
@@ -920,9 +937,9 @@
           </div>
         </div>
         <div style="display:flex; flex-direction:column; gap:5px">
-          <span style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.16em; color:#7a2f2f">01</span>
-          <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:20px; margin:0">Schedule 6</h2>
-          <p style="margin:0; font-size:13.5px; line-height:1.55; color:#5c5f59">The record as the pre-printed field datasheet. Ruled columns, numbered margin.</p>
+          <span style="font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.16em; color:#7a2f2f">01</span>
+          <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:23.5px; margin:0">Schedule 6</h2>
+          <p style="margin:0; font-size:16px; line-height:1.55; color:#5c5f59">The record as the pre-printed field datasheet. Ruled columns, numbered margin.</p>
         </div>
       </div>
 
@@ -942,9 +959,9 @@
           </div>
         </div>
         <div style="display:flex; flex-direction:column; gap:5px">
-          <span style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.16em; color:#7a2f2f">02</span>
-          <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:20px; margin:0">Split Rail</h2>
-          <p style="margin:0; font-size:13.5px; line-height:1.55; color:#5c5f59">A fixed identity panel on the left, dark photographic feed on the right.</p>
+          <span style="font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.16em; color:#7a2f2f">02</span>
+          <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:23.5px; margin:0">Split Rail</h2>
+          <p style="margin:0; font-size:16px; line-height:1.55; color:#5c5f59">A fixed identity panel on the left, dark photographic feed on the right.</p>
         </div>
       </div>
 
@@ -958,9 +975,9 @@
           <div style="grid-column:span 2; border:1px solid rgba(63,107,74,.45); background:rgba(255,255,255,.7)"></div>
         </div>
         <div style="display:flex; flex-direction:column; gap:5px">
-          <span style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.16em; color:#7a2f2f">03</span>
-          <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:20px; margin:0">Atlas</h2>
-          <p style="margin:0; font-size:13.5px; line-height:1.55; color:#5c5f59">A map sheet. Everything laid out as tiles on a survey grid.</p>
+          <span style="font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.16em; color:#7a2f2f">03</span>
+          <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:23.5px; margin:0">Atlas</h2>
+          <p style="margin:0; font-size:16px; line-height:1.55; color:#5c5f59">A map sheet. Everything laid out as tiles on a survey grid.</p>
         </div>
       </div>
 
@@ -981,9 +998,9 @@
           </div>
         </div>
         <div style="display:flex; flex-direction:column; gap:5px">
-          <span style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.16em; color:#7a2f2f">04</span>
-          <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:20px; margin:0">Field Notebook</h2>
-          <p style="margin:0; font-size:13.5px; line-height:1.55; color:#5c5f59">Ruled journal pages. Dated entries, taped-in plates, specimen labels.</p>
+          <span style="font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.16em; color:#7a2f2f">04</span>
+          <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:23.5px; margin:0">Field Notebook</h2>
+          <p style="margin:0; font-size:16px; line-height:1.55; color:#5c5f59">Ruled journal pages. Dated entries, taped-in plates, specimen labels.</p>
         </div>
       </div>
     </div>
@@ -1033,7 +1050,7 @@
 
       <section class="sched on-top" id="s6-2">
         <div class="sched-head"><span class="no">SCH 02</span><h2>Instruments built</h2><span class="of">{{ s6nPortals }} public portals</span></div>
-        <p style="margin:0; padding:14px 18px; font-family:'Archivo', system-ui, sans-serif; font-size:15px; line-height:1.55; color:#16233f; background:#f7f7f4; border-bottom:1px solid rgba(22,35,63,.26)"><b style="font-weight:700">Personal projects, built and maintained by me.</b> Portals, atlases and dashboards I made on my own time to put wildlife, heritage and spatial data within anyone&#8217;s reach. Each opens a full write-up.</p>
+        <p style="margin:0; padding:14px 18px; font-family:'Archivo', system-ui, sans-serif; font-size:17.5px; line-height:1.55; color:#16233f; background:#f7f7f4; border-bottom:1px solid rgba(22,35,63,.26)"><b style="font-weight:700">Personal projects, built and maintained by me.</b> Portals, atlases and dashboards I made on my own time to put wildlife, heritage and spatial data within anyone&#8217;s reach. Each opens a full write-up.</p>
         <div class="colhead portal-cols"><span>No.</span><span>Instrument</span><span>What it is</span><span>Plate</span></div>
         <sc-for list="{{ s6Portals }}" as="p" hint-placeholder-count="4">
           <a class="portal" href="{{ p.page }}" target="_blank" rel="noopener" onClick="{{ saveReturn }}">
@@ -1058,7 +1075,7 @@
       </section>
 
       <section class="sched on-top" id="s6-4">
-        <div class="sched-head"><span class="no">SCH 04</span><h2>Appointments</h2><span class="of">{{ s6nRoles }} appointments</span></div>
+        <div class="sched-head"><span class="no">SCH 04</span><h2>Experience</h2><span class="of">{{ s6nRoles }} roles</span></div>
         <div class="colhead appt-cols"><span>No.</span><span>Period and organisation</span><span>Post and duties</span></div>
         <sc-for list="{{ s6Roles }}" as="r" hint-placeholder-count="8">
           <article class="appt">
@@ -1132,25 +1149,18 @@
       </sc-if>
 
       <section class="sched" id="{{ s6ContactId }}" style="border-bottom:none">
-        <div class="sched-head"><span class="no">SCH {{ s6ContactNo }}</span><h2>Correspondence</h2><span class="of">By email or the form below</span></div>
+        <div class="sched-head"><span class="no">SCH {{ s6ContactNo }}</span><h2>Correspondence</h2><span class="of">By email, telephone or LinkedIn</span></div>
         <div class="corr">
           <div>
             <p style="margin:0 0 16px; max-width:46ch">{{ contactLine }}</p>
+          </div>
+          <div>
             <dl>
               <dt>Email</dt><dd><a href="mailto:jambu.nikunj@gmail.com">jambu.nikunj@gmail.com</a></dd>
               <dt>Telephone</dt><dd>+91 91127 60918</dd>
               <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/nikunj-jambu" target="_blank" rel="noopener">nikunj-jambu</a></dd>
             </dl>
             <a class="btn cv-foot" href="uploads/Nikunj_Jambu_CV_2pg.pdf">Curriculum vitae <span class="n">PDF &middot; 2pp</span></a>
-          </div>
-          <div>
-            <form onSubmit="{{ onSubmit }}">
-              <div class="fld"><label>Name of correspondent</label><input name="name" required autocomplete="name" /></div>
-              <div class="fld"><label>Return address</label><input name="email" type="email" required autocomplete="email" /></div>
-              <div class="fld"><label>Entry</label><textarea name="message" required></textarea></div>
-              <button class="btn" type="submit">{{ sendLabel }} <span class="n">opens mail app</span></button>
-              <p class="note">There is no server behind this form. It hands your message to your own mail application, addressed to jambu.nikunj@gmail.com.</p>
-            </form>
           </div>
         </div>
         <div class="foot"><span>Nikunj Jambu &middot; conservation biologist, spatial ecologist</span><span>Sheet compiled 2026</span></div>
@@ -1177,14 +1187,14 @@
 
 
 <sc-if value="{{ isSplit }}">
-<div style="min-height:100vh; background:#14180f; color:#f0eee4; font-family:'Space Grotesk', system-ui, sans-serif; display:flex; align-items:flex-start">
-  <aside style="position:sticky; top:0; height:100vh; flex:0 0 340px; border-right:1px solid rgba(240,238,228,.16); padding:40px 32px; display:flex; flex-direction:column; gap:26px; overflow:auto">
+<div class="sp-root" style="min-height:100vh; background:#14180f; color:#f0eee4; font-family:'Space Grotesk', system-ui, sans-serif; display:flex; align-items:flex-start">
+  <aside class="sp-aside" style="position:sticky; top:0; height:100vh; flex:0 0 340px; border-right:1px solid rgba(240,238,228,.16); padding:40px 32px; display:flex; flex-direction:column; gap:26px; overflow:auto">
     <div style="position:relative; flex:none; width:104px; height:104px; border-radius:50%; overflow:hidden; border:1px solid rgba(240,238,228,.2)"><image-slot id="portrait" src="uploads/web/4851.jpg" shape="circle" placeholder="Portrait"></image-slot></div>
     <div>
-      <h1 style="font-family:'Space Grotesk', sans-serif; font-size:30px; font-weight:700; margin:0 0 8px; letter-spacing:-.02em; line-height:1.1">Nikunj Jambu</h1>
-      <p style="margin:0; font-size:14px; line-height:1.6; color:rgba(240,238,228,.6)">Conservation Biologist · Spatial Ecologist · MEL Specialist</p>
+      <h1 style="font-family:'Space Grotesk', sans-serif; font-size:35.5px; font-weight:700; margin:0 0 8px; letter-spacing:-.02em; line-height:1.1">Nikunj Jambu</h1>
+      <p style="margin:0; font-size:16.5px; line-height:1.6; color:rgba(240,238,228,.6)">Conservation Biologist · Spatial Ecologist · MEL Specialist</p>
     </div>
-    <nav style="flex:none; display:flex; flex-direction:column; gap:2px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase">
+    <nav style="flex:none; display:flex; flex-direction:column; gap:2px; font-family:'Space Mono', monospace; font-size:14px; letter-spacing:.12em; text-transform:uppercase">
       <a href="#s-top" style="padding:9px 0; border-bottom:1px solid rgba(240,238,228,.1)">Profile</a>
       <a href="#s-work" style="padding:9px 0; border-bottom:1px solid rgba(240,238,228,.1)">Portals &amp; tools</a>
       <a href="#s-exp" style="padding:9px 0; border-bottom:1px solid rgba(240,238,228,.1)">Experience</a>
@@ -1197,46 +1207,46 @@
       </sc-if>
       <a href="#s-contact" style="padding:9px 0; border-bottom:1px solid rgba(240,238,228,.1)">Contact</a>
     </nav>
-    <div style="margin-top:auto; flex:none; display:flex; flex-direction:column; gap:12px; font-size:13px; color:rgba(240,238,228,.6)">
+    <div style="margin-top:auto; flex:none; display:flex; flex-direction:column; gap:12px; font-size:15.5px; color:rgba(240,238,228,.6)">
       <a href="mailto:jambu.nikunj@gmail.com" style="color:#c9a227">jambu.nikunj@gmail.com</a>
-      <a href="uploads/Nikunj_Jambu_CV_2pg.pdf" download="" style="border:1px solid rgba(240,238,228,.25); padding:11px 14px; text-align:center; font-size:13px; color:#f0eee4">Download CV (PDF)</a>
-      <button onClick="{{ backToChooser }}" style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; background:transparent; border:1px solid rgba(240,238,228,.25); color:#c9a227; padding:10px; cursor:pointer">Split Rail ↺</button>
+      <a href="uploads/Nikunj_Jambu_CV_2pg.pdf" download="" style="border:1px solid rgba(240,238,228,.25); padding:11px 14px; text-align:center; font-size:15.5px; color:#f0eee4">Download CV (PDF)</a>
+      <button onClick="{{ backToChooser }}" style="font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.14em; text-transform:uppercase; background:transparent; border:1px solid rgba(240,238,228,.25); color:#c9a227; padding:10px; cursor:pointer">Split Rail ↺</button>
     </div>
   </aside>
 
   <main style="flex:1; min-width:0">
     <section id="s-top" style="padding:76px 56px; border-bottom:1px solid rgba(240,238,228,.16)">
-      <p style="margin:0 0 20px; font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#c9a227">13+ years · India</p>
+      <p style="margin:0 0 20px; font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#c9a227">13+ years · India</p>
       <h2 style="font-size:clamp(32px,4vw,52px); line-height:1.12; margin:0 0 26px; letter-spacing:-.025em; max-width:20ch; font-weight:700">Field ecology, spatial analysis, and the systems that keep both honest.</h2>
-      <p style="margin:0 0 14px; font-size:17px; line-height:1.75; color:rgba(240,238,228,.72); max-width:64ch; text-wrap:pretty">{{ profile1 }}</p>
-      <p style="margin:0; font-size:17px; line-height:1.75; color:rgba(240,238,228,.72); max-width:64ch; text-wrap:pretty">{{ profile2 }}</p>
+      <p style="margin:0 0 14px; font-size:20px; line-height:1.75; color:rgba(240,238,228,.72); max-width:64ch; text-wrap:pretty">{{ profile1 }}</p>
+      <p style="margin:0; font-size:20px; line-height:1.75; color:rgba(240,238,228,.72); max-width:64ch; text-wrap:pretty">{{ profile2 }}</p>
     </section>
 
     <section id="s-work" style="border-bottom:1px solid rgba(240,238,228,.16)">
-      <p style="margin:0; padding:36px 56px 8px; max-width:70ch; font-size:16px; line-height:1.6; color:rgba(240,238,228,.78)"><span style="color:#f0eee4; font-weight:600">Personal projects, built and maintained by me.</span> Portals, atlases and dashboards I made on my own time to put wildlife, heritage and spatial data within anyone&#8217;s reach. Each opens a full write-up.</p>
+      <p style="margin:0; padding:36px 56px 8px; max-width:70ch; font-size:19px; line-height:1.6; color:rgba(240,238,228,.78)"><span style="color:#f0eee4; font-weight:600">Personal projects, built and maintained by me.</span> Portals, atlases and dashboards I made on my own time to put wildlife, heritage and spatial data within anyone&#8217;s reach. Each opens a full write-up.</p>
       <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
         <a href="{{ p.page }}" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="text-decoration:none; color:inherit; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:0; border-bottom:1px solid rgba(240,238,228,.1)">
           <div style="flex:none; position:relative; aspect-ratio:1200/630"><image-slot style="position:absolute; inset:0" id="{{ p.slot }}" src="{{ p.img }}" shape="rect" fit="contain" placeholder="{{ p.shot }}"></image-slot></div>
           <div style="padding:48px 56px; display:flex; flex-direction:column; justify-content:center; gap:12px">
-            <span style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#c9a227">{{ p.kind }}</span>
-            <h3 style="font-size:28px; margin:0; letter-spacing:-.02em">{{ p.name }}</h3>
-            <p style="margin:0; font-size:16px; line-height:1.7; color:rgba(240,238,228,.72)">{{ p.desc }}</p>
-            <span style="margin-top:8px; overflow-wrap:anywhere; font-family:'Space Mono', monospace; font-size:13px; color:#c9a227">{{ p.domain }} →</span>
+            <span style="font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#c9a227">{{ p.kind }}</span>
+            <h3 style="font-size:33px; margin:0; letter-spacing:-.02em">{{ p.name }}</h3>
+            <p style="margin:0; font-size:19px; line-height:1.7; color:rgba(240,238,228,.72)">{{ p.desc }}</p>
+            <span style="margin-top:8px; overflow-wrap:anywhere; font-family:'Space Mono', monospace; font-size:15.5px; color:#c9a227">{{ p.domain }} →</span>
           </div>
         </a>
       </sc-for>
     </section>
 
     <section id="s-exp" style="padding:72px 56px; border-bottom:1px solid rgba(240,238,228,.16)">
-      <h2 style="font-size:28px; margin:0 0 36px; letter-spacing:-.02em">Experience</h2>
+      <h2 style="font-size:33px; margin:0 0 36px; letter-spacing:-.02em">Experience</h2>
       <sc-for list="{{ roles }}" as="r" hint-placeholder-count="4">
         <div style="padding:24px 0; border-top:1px solid rgba(240,238,228,.14)">
           <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:baseline; margin-bottom:10px">
-            <h3 style="font-size:20px; margin:0">{{ r.title }}</h3>
-            <span style="font-size:15px; color:rgba(240,238,228,.6)">{{ r.org }}</span>
-            <span style="margin-left:auto; font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#c9a227">{{ r.period }}</span>
+            <h3 style="font-size:23.5px; margin:0">{{ r.title }}</h3>
+            <span style="font-size:17.5px; color:rgba(240,238,228,.6)">{{ r.org }}</span>
+            <span style="margin-left:auto; font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:#c9a227">{{ r.period }}</span>
           </div>
-          <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:7px; font-size:15.5px; line-height:1.65; color:rgba(240,238,228,.7); max-width:78ch">
+          <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:7px; font-size:18.5px; line-height:1.65; color:rgba(240,238,228,.7); max-width:78ch">
             <sc-for list="{{ r.bullets }}" as="b" hint-placeholder-count="2"><li>{{ b }}</li></sc-for>
           </ul>
         </div>
@@ -1246,41 +1256,41 @@
     <section style="padding:72px 56px; border-bottom:1px solid rgba(240,238,228,.16); display:flex; flex-direction:column; gap:44px">
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:44px; align-items:start">
         <div>
-          <h2 style="font-size:24px; margin:0 0 22px; letter-spacing:-.02em">Skills &amp; methods</h2>
+          <h2 style="font-size:28.5px; margin:0 0 22px; letter-spacing:-.02em">Skills &amp; methods</h2>
           <div style="display:flex; flex-direction:column; gap:16px">
             <sc-for list="{{ skills }}" as="s" hint-placeholder-count="4">
               <div>
-                <p style="margin:0 0 5px; font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#c9a227">{{ s.label }}</p>
-                <p style="margin:0; font-size:15px; line-height:1.65; color:rgba(240,238,228,.7)">{{ s.text }}</p>
+                <p style="margin:0 0 5px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#c9a227">{{ s.label }}</p>
+                <p style="margin:0; font-size:17.5px; line-height:1.65; color:rgba(240,238,228,.7)">{{ s.text }}</p>
               </div>
             </sc-for>
           </div>
         </div>
         <div>
-          <h2 style="font-size:24px; margin:0 0 22px; letter-spacing:-.02em">Education</h2>
+          <h2 style="font-size:28.5px; margin:0 0 22px; letter-spacing:-.02em">Education</h2>
           <div style="display:flex; flex-direction:column; gap:14px">
             <sc-for list="{{ education }}" as="e" hint-placeholder-count="3">
               <div>
-                <p style="margin:0; font-size:15.5px; font-weight:600">{{ e.degree }}</p>
-                <p style="margin:3px 0 0; font-size:14px; color:rgba(240,238,228,.6)">{{ e.place }}</p>
+                <p style="margin:0; font-size:18.5px; font-weight:600">{{ e.degree }}</p>
+                <p style="margin:3px 0 0; font-size:16.5px; color:rgba(240,238,228,.6)">{{ e.place }}</p>
               </div>
             </sc-for>
           </div>
         </div>
         <div>
-          <h2 style="font-size:24px; margin:0 0 22px; letter-spacing:-.02em">Grants &amp; outreach</h2>
-          <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px; font-size:15px; line-height:1.65; color:rgba(240,238,228,.7)">
+          <h2 style="font-size:28.5px; margin:0 0 22px; letter-spacing:-.02em">Grants &amp; outreach</h2>
+          <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px; font-size:17.5px; line-height:1.65; color:rgba(240,238,228,.7)">
             <sc-for list="{{ grants }}" as="g" hint-placeholder-count="3"><li>{{ g }}</li></sc-for>
           </ul>
         </div>
       </div>
 
       <div style="padding-top:34px; border-top:1px solid rgba(240,238,228,.14)">
-        <h2 style="font-size:24px; margin:0 0 18px; letter-spacing:-.02em">Certifications</h2>
+        <h2 style="font-size:28.5px; margin:0 0 18px; letter-spacing:-.02em">Certifications</h2>
         <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:10px">
           <sc-for list="{{ certs }}" as="c" hint-placeholder-count="8">
-            <button type="button" onClick="{{ c.open }}" style="text-align:left; cursor:pointer; font-family:'Space Grotesk', sans-serif; border:1px solid rgba(240,238,228,.2); background:transparent; padding:10px 13px; font-size:13px; line-height:1.4; color:rgba(240,238,228,.7); display:flex; justify-content:space-between; gap:10px; align-items:baseline" style-hover="border-color:#c9a227; color:#f0eee4">
-              <span>{{ c.name }}</span><span style="font-family:'Space Mono', monospace; font-size:10px; color:#c9a227">View ↗</span>
+            <button type="button" onClick="{{ c.open }}" style="text-align:left; cursor:pointer; font-family:'Space Grotesk', sans-serif; border:1px solid rgba(240,238,228,.2); background:transparent; padding:10px 13px; font-size:15.5px; line-height:1.4; color:rgba(240,238,228,.7); display:flex; justify-content:space-between; gap:10px; align-items:baseline" style-hover="border-color:#c9a227; color:#f0eee4">
+              <span>{{ c.name }}</span><span style="font-family:'Space Mono', monospace; font-size:12px; color:#c9a227">View ↗</span>
             </button>
           </sc-for>
         </div>
@@ -1288,11 +1298,11 @@
     </section>
 
     <section id="s-pub" style="padding:72px 56px; border-bottom:1px solid rgba(240,238,228,.16)">
-      <h2 style="font-size:28px; margin:0 0 30px; letter-spacing:-.02em">Selected publications</h2>
+      <h2 style="font-size:33px; margin:0 0 30px; letter-spacing:-.02em">Selected publications</h2>
       <sc-for list="{{ pubs }}" as="p" hint-placeholder-count="5">
         <div style="display:grid; grid-template-columns:60px 1fr; gap:20px; padding:18px 0; border-top:1px solid rgba(240,238,228,.14)">
-          <span style="font-family:'Space Mono', monospace; font-size:13px; color:#c9a227">{{ p.year }}</span>
-          <p style="margin:0; font-size:15.5px; line-height:1.65; color:rgba(240,238,228,.7)"><span style="color:#f0eee4; font-weight:600">{{ p.authors }}</span> {{ p.title }} <em>{{ p.venue }}</em></p>
+          <span style="font-family:'Space Mono', monospace; font-size:15.5px; color:#c9a227">{{ p.year }}</span>
+          <p style="margin:0; font-size:18.5px; line-height:1.65; color:rgba(240,238,228,.7)"><span style="color:#f0eee4; font-weight:600">{{ p.authors }}</span> {{ p.title }} <em>{{ p.venue }}</em></p>
         </div>
       </sc-for>
     </section>
@@ -1302,7 +1312,7 @@
           <sc-for list="{{ photos }}" as="ph" hint-placeholder-count="6">
             <figure role="button" tabindex="0" onClick="{{ ph.open }}" style="margin:0; cursor:zoom-in; flex:{{ ph.arn }} 1 {{ ph.basis }}px; min-width:0; display:flex; flex-direction:column; gap:7px">
               <div style="position:relative; width:100%; aspect-ratio:{{ ph.ar }}; background:#14180f; border:1px solid rgba(240,238,228,.16)"><image-slot style="position:absolute; inset:0" id="{{ ph.src }}" src="{{ ph.src }}" shape="rect" fit="cover" placeholder="Field photograph"></image-slot></div>
-              <figcaption style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(240,238,228,.55)">{{ ph.cap }}</figcaption>
+              <figcaption style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:rgba(240,238,228,.55)">{{ ph.cap }}</figcaption>
             </figure>
           </sc-for>
           <i aria-hidden="true" style="flex:1000 1 260px"></i>
@@ -1311,16 +1321,16 @@
 
     <section id="s-press" style="padding:72px 56px; border-bottom:1px solid rgba(240,238,228,.16)">
       <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; flex-wrap:wrap; margin-bottom:26px">
-        <h2 style="font-size:28px; margin:0; letter-spacing:-.02em">Coverage</h2>
-        <p style="margin:0; font-size:13px; color:rgba(240,238,228,.45)">Press and published accounts</p>
+        <h2 style="font-size:33px; margin:0; letter-spacing:-.02em">Coverage</h2>
+        <p style="margin:0; font-size:15.5px; color:rgba(240,238,228,.45)">Press and published accounts</p>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:16px">
         <sc-for list="{{ press }}" as="a" hint-placeholder-count="3">
           <button type="button" onClick="{{ a.open }}" style="text-align:left; cursor:pointer; font-family:'Space Grotesk', sans-serif; border:1px solid rgba(240,238,228,.2); background:transparent; padding:20px; display:flex; flex-direction:column; gap:10px; color:#f0eee4" style-hover="border-color:#c9a227">
-            <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#c9a227">{{ a.outlet }} · {{ a.date }}</span>
-            <span style="font-size:17px; line-height:1.45">{{ a.title }}</span>
-            <span style="font-size:13px; color:rgba(240,238,228,.6)">{{ a.role }}</span>
-            <span style="margin-top:auto; font-family:'Space Mono', monospace; font-size:11px; color:#c9a227">Read →</span>
+            <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#c9a227">{{ a.outlet }} · {{ a.date }}</span>
+            <span style="font-size:20px; line-height:1.45">{{ a.title }}</span>
+            <span style="font-size:15.5px; color:rgba(240,238,228,.6)">{{ a.role }}</span>
+            <span style="margin-top:auto; font-family:'Space Mono', monospace; font-size:13px; color:#c9a227">Read →</span>
           </button>
         </sc-for>
       </div>
@@ -1328,26 +1338,26 @@
 
     <section id="s-avoc" style="padding:72px 56px; border-bottom:1px solid rgba(240,238,228,.16)">
       <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; flex-wrap:wrap; margin-bottom:26px">
-        <h2 style="font-size:28px; margin:0; letter-spacing:-.02em">Avocations</h2>
-        <p style="margin:0; font-size:13px; color:rgba(240,238,228,.45)">Beyond the field</p>
+        <h2 style="font-size:33px; margin:0; letter-spacing:-.02em">Avocations</h2>
+        <p style="margin:0; font-size:15.5px; color:rgba(240,238,228,.45)">Beyond the field</p>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:32px; font-size:16px; line-height:1.6">
-        <div><h3 style="margin:0 0 10px; font-size:18px; color:#c9a227">{{ avocTitle }}</h3><p style="margin:0 0 10px; color:rgba(240,238,228,.78)">{{ avocIntro }}</p><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:6px"><sc-for list="{{ avocCamps }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
-        <div><h3 style="margin:0 0 10px; font-size:18px; color:#c9a227">{{ avocWonLabel }}</h3><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:6px"><sc-for list="{{ avocWins }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:32px; font-size:19px; line-height:1.6">
+        <div><h3 style="margin:0 0 10px; font-size:21px; color:#c9a227">{{ avocTitle }}</h3><p style="margin:0 0 10px; color:rgba(240,238,228,.78)">{{ avocIntro }}</p><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:6px"><sc-for list="{{ avocCamps }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
+        <div><h3 style="margin:0 0 10px; font-size:21px; color:#c9a227">{{ avocWonLabel }}</h3><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:6px"><sc-for list="{{ avocWins }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
       </div>
     </section>
 
 <sc-if value="{{ showNotes }}">
     <section id="s-notes" style="padding:72px 56px; border-bottom:1px solid rgba(240,238,228,.16)">
       <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; flex-wrap:wrap; margin-bottom:20px">
-        <h2 style="font-size:28px; margin:0; letter-spacing:-.02em">Notes</h2>
-        <a href="blog/" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="font-size:13px; color:#c9a227">All notes →</a>
+        <h2 style="font-size:33px; margin:0; letter-spacing:-.02em">Notes</h2>
+        <a href="blog/" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="font-size:15.5px; color:#c9a227">All notes →</a>
       </div>
       <sc-for list="{{ notes }}" as="n" hint-placeholder-count="3">
         <a href="{{ n.url }}" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="display:grid; grid-template-columns:100px 1fr auto; gap:20px; align-items:baseline; padding:18px 0; border-top:1px solid rgba(240,238,228,.14)">
-          <span style="font-family:'Space Mono', monospace; font-size:12px; color:rgba(240,238,228,.45)">{{ n.date }}</span>
-          <span style="font-size:17px">{{ n.title }}</span>
-          <span style="font-size:14px; color:#c9a227">Read →</span>
+          <span style="font-family:'Space Mono', monospace; font-size:14px; color:rgba(240,238,228,.45)">{{ n.date }}</span>
+          <span style="font-size:20px">{{ n.title }}</span>
+          <span style="font-size:16.5px; color:#c9a227">Read →</span>
         </a>
       </sc-for>
     </section>
@@ -1355,23 +1365,19 @@
 
     <section id="s-contact" style="padding:72px 56px 88px; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:48px">
       <div>
-        <h2 style="font-size:28px; margin:0 0 16px; letter-spacing:-.02em">Get in touch</h2>
-        <p style="margin:0 0 24px; font-size:16.5px; line-height:1.7; color:rgba(240,238,228,.72); max-width:40ch">{{ contactLine }}</p>
-        <dl style="margin:0; display:grid; grid-template-columns:auto 1fr; gap:11px 20px; font-size:15px">
-          <dt style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(240,238,228,.45); padding-top:4px">Email</dt>
+        <h2 style="font-size:33px; margin:0 0 16px; letter-spacing:-.02em">Get in touch</h2>
+        <p style="margin:0 0 24px; font-size:19.5px; line-height:1.7; color:rgba(240,238,228,.72); max-width:40ch">{{ contactLine }}</p>
+      </div>
+      <div>
+        <dl style="margin:0; display:grid; grid-template-columns:auto 1fr; gap:11px 20px; font-size:17.5px">
+          <dt style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:rgba(240,238,228,.45); padding-top:4px">Email</dt>
           <dd style="margin:0"><a href="mailto:jambu.nikunj@gmail.com" style="color:#c9a227">jambu.nikunj@gmail.com</a></dd>
-          <dt style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(240,238,228,.45); padding-top:4px">Phone</dt>
+          <dt style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:rgba(240,238,228,.45); padding-top:4px">Phone</dt>
           <dd style="margin:0">+91 9150791698</dd>
-          <dt style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(240,238,228,.45); padding-top:4px">LinkedIn</dt>
+          <dt style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:rgba(240,238,228,.45); padding-top:4px">LinkedIn</dt>
           <dd style="margin:0"><a href="https://linkedin.com/in/nikunj-jambu-48271666/" style="color:#c9a227">nikunj-jambu</a></dd>
         </dl>
       </div>
-      <form onSubmit="{{ onSubmit }}" style="display:flex; flex-direction:column; gap:12px">
-        <input name="name" required placeholder="Name" style="padding:13px 14px; border:1px solid rgba(240,238,228,.22); background:#1b2015; color:#f0eee4; font-family:'Space Grotesk', sans-serif; font-size:15px" />
-        <input name="email" required placeholder="Email" type="email" style="padding:13px 14px; border:1px solid rgba(240,238,228,.22); background:#1b2015; color:#f0eee4; font-family:'Space Grotesk', sans-serif; font-size:15px" />
-        <textarea name="message" required placeholder="Message" rows="5" style="padding:13px 14px; border:1px solid rgba(240,238,228,.22); background:#1b2015; color:#f0eee4; font-family:'Space Grotesk', sans-serif; font-size:15px; resize:vertical"></textarea>
-        <button type="submit" style="padding:14px; background:#c9a227; color:#14180f; border:none; font-size:15px; font-weight:600; cursor:pointer; font-family:'Space Grotesk', sans-serif">{{ sendLabel }}</button>
-      </form>
     </section>
   </main>
 </div>
@@ -1383,49 +1389,49 @@
   <div style="max-width:1280px; margin:0 auto; padding:28px 28px 72px">
 
     <header style="position:sticky; top:8px; z-index:50; box-shadow:0 6px 16px -10px rgba(22,33,26,.35); display:flex; align-items:center; gap:24px; flex-wrap:wrap; border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:14px 18px; margin-bottom:14px">
-      <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:16px; font-weight:700">Nikunj Jambu</span>
-      <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">Sheet 1 of 1 · Conservation · Spatial · MEL</span>
-      <nav style="margin-left:auto; display:flex; gap:16px; flex-wrap:wrap; min-width:0; font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase">
+      <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:19px; font-weight:700">Nikunj Jambu</span>
+      <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">Sheet 1 of 1 · Conservation · Spatial · MEL</span>
+      <nav style="margin-left:auto; display:flex; gap:16px; flex-wrap:wrap; min-width:0; font-family:'Space Mono', monospace; font-size:12.5px; letter-spacing:.14em; text-transform:uppercase">
         <a href="#a-work">Work</a><a href="#a-exp">Experience</a><a href="#a-pub">Publications</a><a href="#a-press">Coverage</a><a href="#a-avoc">Avocations</a><sc-if value="{{ showNotes }}"><a href="#a-notes">Notes</a></sc-if><a href="#a-contact">Contact</a>
       </nav>
-      <button onClick="{{ backToChooser }}" style="flex:none; white-space:nowrap; font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; background:transparent; border:1px solid rgba(63,107,74,.4); color:#3f6b4a; padding:7px 12px; cursor:pointer">Atlas ↺</button>
+      <button onClick="{{ backToChooser }}" style="flex:none; white-space:nowrap; font-family:'Space Mono', monospace; font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; background:transparent; border:1px solid rgba(63,107,74,.4); color:#3f6b4a; padding:7px 12px; cursor:pointer">Atlas ↺</button>
     </header>
 
-    <div style="display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px; margin-bottom:14px">
+    <div class="at-top" style="display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px; margin-bottom:14px">
       <div style="grid-column:span 2; grid-row:span 2; border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:32px; display:flex; flex-direction:column; justify-content:center">
-        <p style="margin:0 0 14px; font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#3f6b4a">Profile</p>
+        <p style="margin:0 0 14px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#3f6b4a">Profile</p>
         <h1 style="font-family:'Libre Baskerville', Georgia, serif; font-size:clamp(28px,2.6vw,38px); line-height:1.18; margin:0 0 20px; letter-spacing:-.015em">Field ecology, spatial analysis, and the systems that keep both honest.</h1>
-        <p style="margin:0 0 12px; font-size:15.5px; line-height:1.7; color:#3f4b43">{{ profile1 }}</p>
-        <p style="margin:0; font-size:15.5px; line-height:1.7; color:#3f4b43">{{ profile2 }}</p>
+        <p style="margin:0 0 12px; font-size:18.5px; line-height:1.7; color:#3f4b43">{{ profile1 }}</p>
+        <p style="margin:0; font-size:18.5px; line-height:1.7; color:#3f4b43">{{ profile2 }}</p>
       </div>
       <div style="position:relative; border:1px solid rgba(63,107,74,.35); min-height:200px"><image-slot id="portrait" src="uploads/web/4851.jpg" shape="rect" placeholder="Portrait"></image-slot></div>
       <div style="border:1px solid rgba(63,107,74,.35); background:#3f6b4a; color:#f4f8f3; padding:22px; display:flex; flex-direction:column; justify-content:space-between">
-        <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; opacity:.75">Experience</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; opacity:.75">Experience</span>
         <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:52px; line-height:1">13+</span>
-        <span style="font-size:13px; opacity:.85">years across India</span>
+        <span style="font-size:15.5px; opacity:.85">years across India</span>
       </div>
       <div style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:22px; display:flex; flex-direction:column; justify-content:space-between">
-        <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">Trained</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">Trained</span>
         <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:52px; line-height:1">2,500</span>
-        <span style="font-size:13px; color:#3f4b43">forest staff, IFMT/VanApp</span>
+        <span style="font-size:15.5px; color:#3f4b43">forest staff, IFMT/VanApp</span>
       </div>
       <div style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:22px; display:flex; flex-direction:column; gap:10px; justify-content:center">
-        <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">Now</span>
-        <span style="font-size:15px; line-height:1.5">MEL Officer, The Nature Conservancy</span>
-        <a href="uploads/Nikunj_Jambu_CV_2pg.pdf" download="" style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.1em; color:#3f6b4a">Download CV (PDF) →</a>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">Now</span>
+        <span style="font-size:17.5px; line-height:1.5">MEL Officer, The Nature Conservancy</span>
+        <a href="uploads/Nikunj_Jambu_CV_2pg.pdf" download="" style="font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.1em; color:#3f6b4a">Download CV (PDF) →</a>
       </div>
     </div>
 
-    <p style="margin:0 0 14px; padding:14px 18px; border:1px solid rgba(63,107,74,.35); background:#f8faf7; font-size:15px; line-height:1.55"><span style="font-weight:700">Personal projects, built and maintained by me.</span> Portals, atlases and dashboards I made on my own time to put wildlife, heritage and spatial data within anyone&#8217;s reach. Each opens a full write-up.</p>
+    <p style="margin:0 0 14px; padding:14px 18px; border:1px solid rgba(63,107,74,.35); background:#f8faf7; font-size:17.5px; line-height:1.55"><span style="font-weight:700">Personal projects, built and maintained by me.</span> Portals, atlases and dashboards I made on my own time to put wildlife, heritage and spatial data within anyone&#8217;s reach. Each opens a full write-up.</p>
     <div id="a-work" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:14px; margin-bottom:14px">
       <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
         <a href="{{ p.page }}" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="text-decoration:none; color:inherit; border:1px solid rgba(63,107,74,.35); background:#f8faf7; display:flex; flex-direction:column">
           <div style="flex:none; position:relative; width:100%; aspect-ratio:1200/630; border-bottom:1px solid rgba(63,107,74,.35)"><image-slot style="position:absolute; inset:0" id="{{ p.slot }}" src="{{ p.img }}" shape="rect" fit="contain" placeholder="{{ p.shot }}"></image-slot></div>
           <div style="padding:18px; display:flex; flex-direction:column; gap:8px; flex:1">
-            <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">{{ p.kind }}</span>
-            <h3 style="font-family:'Libre Baskerville', Georgia, serif; font-size:19px; margin:0">{{ p.name }}</h3>
-            <p style="margin:0; font-size:14.5px; line-height:1.6; color:#3f4b43">{{ p.desc }}</p>
-            <span style="margin-top:auto; padding-top:12px; overflow-wrap:anywhere; font-family:'Space Mono', monospace; font-size:12px; color:#3f6b4a">{{ p.domain }} →</span>
+            <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">{{ p.kind }}</span>
+            <h3 style="font-family:'Libre Baskerville', Georgia, serif; font-size:22.5px; margin:0">{{ p.name }}</h3>
+            <p style="margin:0; font-size:17px; line-height:1.6; color:#3f4b43">{{ p.desc }}</p>
+            <span style="margin-top:auto; padding-top:12px; overflow-wrap:anywhere; font-family:'Space Mono', monospace; font-size:14px; color:#3f6b4a">{{ p.domain }} →</span>
           </div>
         </a>
       </sc-for>
@@ -1433,15 +1439,15 @@
 
     <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:14px">
       <section id="a-exp" style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:26px">
-        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:24px; margin:0 0 20px">Experience</h2>
+        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:28.5px; margin:0 0 20px">Experience</h2>
         <sc-for list="{{ roles }}" as="r" hint-placeholder-count="4">
           <div style="padding:16px 0; border-top:1px solid rgba(63,107,74,.22)">
             <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:baseline">
-              <h3 style="font-family:'Libre Baskerville', Georgia, serif; font-size:17px; margin:0">{{ r.title }}</h3>
-              <span style="margin-left:auto; font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#3f6b4a">{{ r.period }}</span>
+              <h3 style="font-family:'Libre Baskerville', Georgia, serif; font-size:20px; margin:0">{{ r.title }}</h3>
+              <span style="margin-left:auto; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#3f6b4a">{{ r.period }}</span>
             </div>
-            <p style="margin:4px 0 8px; font-size:13.5px; color:#7d8a80">{{ r.org }}</p>
-            <ul style="margin:0; padding-left:17px; display:flex; flex-direction:column; gap:6px; font-size:14.5px; line-height:1.6; color:#3f4b43">
+            <p style="margin:4px 0 8px; font-size:16px; color:#7d8a80">{{ r.org }}</p>
+            <ul style="margin:0; padding-left:17px; display:flex; flex-direction:column; gap:6px; font-size:17px; line-height:1.6; color:#3f4b43">
               <sc-for list="{{ r.bullets }}" as="b" hint-placeholder-count="2"><li>{{ b }}</li></sc-for>
             </ul>
           </div>
@@ -1450,30 +1456,30 @@
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:14px; align-items:stretch">
 <section style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:26px">
-        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:24px; margin:0 0 18px">Skills &amp; methods</h2>
+        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:28.5px; margin:0 0 18px">Skills &amp; methods</h2>
         <div style="display:flex; flex-direction:column; gap:14px">
           <sc-for list="{{ skills }}" as="s" hint-placeholder-count="4">
             <div>
-              <p style="margin:0 0 4px; font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">{{ s.label }}</p>
-              <p style="margin:0; font-size:14.5px; line-height:1.6; color:#3f4b43">{{ s.text }}</p>
+              <p style="margin:0 0 4px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">{{ s.label }}</p>
+              <p style="margin:0; font-size:17px; line-height:1.6; color:#3f4b43">{{ s.text }}</p>
             </div>
           </sc-for>
         </div>
       </section>
       <section style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:26px">
-        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:24px; margin:0 0 18px">Education</h2>
+        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:28.5px; margin:0 0 18px">Education</h2>
         <div style="display:flex; flex-direction:column; gap:12px">
           <sc-for list="{{ education }}" as="e" hint-placeholder-count="3">
             <div>
-              <p style="margin:0; font-size:15px; font-weight:600">{{ e.degree }}</p>
-              <p style="margin:3px 0 0; font-size:13.5px; color:#7d8a80">{{ e.place }}</p>
+              <p style="margin:0; font-size:17.5px; font-weight:600">{{ e.degree }}</p>
+              <p style="margin:3px 0 0; font-size:16px; color:#7d8a80">{{ e.place }}</p>
             </div>
           </sc-for>
         </div>
       </section>
       <section style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:26px">
-        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:24px; margin:0 0 16px">Grants &amp; outreach</h2>
-        <ul style="margin:0; padding-left:17px; display:flex; flex-direction:column; gap:8px; font-size:14.5px; line-height:1.6; color:#3f4b43">
+        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:28.5px; margin:0 0 16px">Grants &amp; outreach</h2>
+        <ul style="margin:0; padding-left:17px; display:flex; flex-direction:column; gap:8px; font-size:17px; line-height:1.6; color:#3f4b43">
           <sc-for list="{{ grants }}" as="g" hint-placeholder-count="3"><li>{{ g }}</li></sc-for>
         </ul>
       </section>
@@ -1481,21 +1487,21 @@
     </div>
 
     <section id="a-pub" style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:26px; margin-bottom:14px">
-      <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:24px; margin:0 0 18px">Selected publications</h2>
+      <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:28.5px; margin:0 0 18px">Selected publications</h2>
       <sc-for list="{{ pubs }}" as="p" hint-placeholder-count="5">
         <div style="display:grid; grid-template-columns:56px 1fr; gap:18px; padding:14px 0; border-top:1px solid rgba(63,107,74,.22)">
-          <span style="font-family:'Space Mono', monospace; font-size:12.5px; color:#3f6b4a">{{ p.year }}</span>
-          <p style="margin:0; font-size:15px; line-height:1.6; color:#3f4b43"><span style="color:#16211a; font-weight:600">{{ p.authors }}</span> {{ p.title }} <em>{{ p.venue }}</em></p>
+          <span style="font-family:'Space Mono', monospace; font-size:15px; color:#3f6b4a">{{ p.year }}</span>
+          <p style="margin:0; font-size:17.5px; line-height:1.6; color:#3f4b43"><span style="color:#16211a; font-weight:600">{{ p.authors }}</span> {{ p.title }} <em>{{ p.venue }}</em></p>
         </div>
       </sc-for>
     </section>
 
     <section style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:26px; margin-bottom:14px">
-      <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:24px; margin:0 0 16px">Certifications</h2>
+      <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:28.5px; margin:0 0 16px">Certifications</h2>
       <div style="display:flex; flex-wrap:wrap; gap:8px">
         <sc-for list="{{ certs }}" as="c" hint-placeholder-count="6">
-          <button type="button" onClick="{{ c.open }}" style="cursor:pointer; font-family:'Space Grotesk', sans-serif; border:1px solid rgba(63,107,74,.3); background:transparent; padding:7px 12px; font-size:13px; color:#3f4b43; display:flex; gap:8px; align-items:baseline" style-hover="border-color:#3f6b4a; color:#16211a">
-            <span>{{ c.name }}</span><span style="font-family:'Space Mono', monospace; font-size:10px; color:#3f6b4a">↗</span>
+          <button type="button" onClick="{{ c.open }}" style="cursor:pointer; font-family:'Space Grotesk', sans-serif; border:1px solid rgba(63,107,74,.3); background:transparent; padding:7px 12px; font-size:15.5px; color:#3f4b43; display:flex; gap:8px; align-items:baseline" style-hover="border-color:#3f6b4a; color:#16211a">
+            <span>{{ c.name }}</span><span style="font-family:'Space Mono', monospace; font-size:12px; color:#3f6b4a">↗</span>
           </button>
         </sc-for>
       </div>
@@ -1505,7 +1511,7 @@
           <sc-for list="{{ photos }}" as="ph" hint-placeholder-count="6">
             <figure role="button" tabindex="0" onClick="{{ ph.open }}" style="margin:0; cursor:zoom-in; flex:{{ ph.arn }} 1 {{ ph.basis }}px; min-width:0; display:flex; flex-direction:column; gap:7px">
               <div style="position:relative; width:100%; aspect-ratio:{{ ph.ar }}; border:1px solid rgba(63,107,74,.35)"><image-slot style="position:absolute; inset:0" id="{{ ph.src }}" src="{{ ph.src }}" shape="rect" fit="cover" placeholder="Field photograph"></image-slot></div>
-              <figcaption style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:#5d7a63">{{ ph.cap }}</figcaption>
+              <figcaption style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#5d7a63">{{ ph.cap }}</figcaption>
             </figure>
           </sc-for>
           <i aria-hidden="true" style="flex:1000 1 230px"></i>
@@ -1513,15 +1519,15 @@
 
     <section id="a-press" style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:26px; margin-bottom:14px">
       <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:14px">
-        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:24px; margin:0">Coverage</h2>
-        <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#7d8a80">Press · published accounts</span>
+        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:28.5px; margin:0">Coverage</h2>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#7d8a80">Press · published accounts</span>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:12px">
         <sc-for list="{{ press }}" as="a" hint-placeholder-count="3">
           <button type="button" onClick="{{ a.open }}" style="text-align:left; cursor:pointer; font-family:'Space Grotesk', sans-serif; border:1px solid rgba(63,107,74,.3); background:#eef1ec; padding:16px; display:flex; flex-direction:column; gap:8px; color:#16211a" style-hover="border-color:#3f6b4a">
-            <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#3f6b4a">{{ a.outlet }} · {{ a.date }}</span>
-            <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:16px; line-height:1.4">{{ a.title }}</span>
-            <span style="margin-top:auto; font-family:'Space Mono', monospace; font-size:10.5px; color:#3f6b4a">Read →</span>
+            <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#3f6b4a">{{ a.outlet }} · {{ a.date }}</span>
+            <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:19px; line-height:1.4">{{ a.title }}</span>
+            <span style="margin-top:auto; font-family:'Space Mono', monospace; font-size:12.5px; color:#3f6b4a">Read →</span>
           </button>
         </sc-for>
       </div>
@@ -1529,26 +1535,26 @@
 
     <section id="a-avoc" style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:26px; margin-bottom:14px">
       <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:14px">
-        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:24px; margin:0">Avocations</h2>
-        <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#7d8a80">Beyond the field</span>
+        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:28.5px; margin:0">Avocations</h2>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#7d8a80">Beyond the field</span>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; font-size:15px; line-height:1.55">
-        <div><h3 style="margin:0 0 8px; font-family:'Libre Baskerville', Georgia, serif; font-size:17px; color:#3f6b4a">{{ avocTitle }}</h3><p style="margin:0 0 8px">{{ avocIntro }}</p><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:5px"><sc-for list="{{ avocCamps }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
-        <div><h3 style="margin:0 0 8px; font-family:'Libre Baskerville', Georgia, serif; font-size:17px; color:#3f6b4a">{{ avocWonLabel }}</h3><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:5px"><sc-for list="{{ avocWins }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; font-size:17.5px; line-height:1.55">
+        <div><h3 style="margin:0 0 8px; font-family:'Libre Baskerville', Georgia, serif; font-size:20px; color:#3f6b4a">{{ avocTitle }}</h3><p style="margin:0 0 8px">{{ avocIntro }}</p><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:5px"><sc-for list="{{ avocCamps }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
+        <div><h3 style="margin:0 0 8px; font-family:'Libre Baskerville', Georgia, serif; font-size:20px; color:#3f6b4a">{{ avocWonLabel }}</h3><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:5px"><sc-for list="{{ avocWins }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
       </div>
     </section>
 
 <sc-if value="{{ showNotes }}">
     <section id="a-notes" style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:26px; margin-bottom:14px">
       <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:12px">
-        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:24px; margin:0">Notes</h2>
-        <a href="blog/" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">All notes →</a>
+        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:28.5px; margin:0">Notes</h2>
+        <a href="blog/" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3f6b4a">All notes →</a>
       </div>
       <sc-for list="{{ notes }}" as="n" hint-placeholder-count="3">
         <a href="{{ n.url }}" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="display:grid; grid-template-columns:80px 1fr auto; gap:18px; align-items:baseline; padding:14px 0; border-top:1px solid rgba(63,107,74,.22)">
-          <span style="font-family:'Space Mono', monospace; font-size:11px; color:#7d8a80">{{ n.date }}</span>
-          <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:16px">{{ n.title }}</span>
-          <span style="font-size:13px; color:#3f6b4a">Read →</span>
+          <span style="font-family:'Space Mono', monospace; font-size:13px; color:#7d8a80">{{ n.date }}</span>
+          <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:19px">{{ n.title }}</span>
+          <span style="font-size:15.5px; color:#3f6b4a">Read →</span>
         </a>
       </sc-for>
     </section>
@@ -1556,23 +1562,19 @@
 
     <section id="a-contact" style="border:1px solid rgba(63,107,74,.35); background:#f8faf7; padding:32px; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:40px">
       <div>
-        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:26px; margin:0 0 14px">Get in touch</h2>
-        <p style="margin:0 0 22px; font-size:15.5px; line-height:1.7; color:#3f4b43; max-width:40ch">{{ contactLine }}</p>
-        <dl style="margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px; font-size:14.5px">
-          <dt style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#7d8a80; padding-top:3px">Email</dt>
+        <h2 style="font-family:'Libre Baskerville', Georgia, serif; font-size:30.5px; margin:0 0 14px">Get in touch</h2>
+        <p style="margin:0 0 22px; font-size:18.5px; line-height:1.7; color:#3f4b43; max-width:40ch">{{ contactLine }}</p>
+      </div>
+      <div>
+        <dl style="margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px; font-size:17px">
+          <dt style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7d8a80; padding-top:3px">Email</dt>
           <dd style="margin:0"><a href="mailto:jambu.nikunj@gmail.com" style="color:#3f6b4a">jambu.nikunj@gmail.com</a></dd>
-          <dt style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#7d8a80; padding-top:3px">Phone</dt>
+          <dt style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7d8a80; padding-top:3px">Phone</dt>
           <dd style="margin:0">+91 9150791698</dd>
-          <dt style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#7d8a80; padding-top:3px">LinkedIn</dt>
+          <dt style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7d8a80; padding-top:3px">LinkedIn</dt>
           <dd style="margin:0"><a href="https://linkedin.com/in/nikunj-jambu-48271666/" style="color:#3f6b4a">nikunj-jambu</a></dd>
         </dl>
       </div>
-      <form onSubmit="{{ onSubmit }}" style="display:flex; flex-direction:column; gap:12px">
-        <input name="name" required placeholder="Name" style="padding:12px 14px; border:1px solid rgba(63,107,74,.35); background:#eef1ec; color:#16211a; font-family:'Space Grotesk', sans-serif; font-size:15px" />
-        <input name="email" required placeholder="Email" type="email" style="padding:12px 14px; border:1px solid rgba(63,107,74,.35); background:#eef1ec; color:#16211a; font-family:'Space Grotesk', sans-serif; font-size:15px" />
-        <textarea name="message" required placeholder="Message" rows="4" style="padding:12px 14px; border:1px solid rgba(63,107,74,.35); background:#eef1ec; color:#16211a; font-family:'Space Grotesk', sans-serif; font-size:15px; resize:vertical"></textarea>
-        <button type="submit" style="padding:13px; background:#3f6b4a; color:#f4f8f3; border:none; font-size:15px; font-weight:600; cursor:pointer; font-family:'Space Grotesk', sans-serif">{{ sendLabel }}</button>
-      </form>
     </section>
   </div>
 </div>
@@ -1585,37 +1587,37 @@
 
     <div style="position:sticky; top:0; z-index:50; background:#faf7ec; display:flex; flex-wrap:wrap; gap:20px; align-items:flex-end; justify-content:space-between; padding:24px 30px 18px; border-bottom:2px solid rgba(47,68,50,.4)">
       <div style="display:flex; flex-direction:column; gap:7px">
-        <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:#7a2f2f">Field notebook · vol. iv</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#7a2f2f">Field notebook · vol. iv</span>
         <h1 style="font-family:'Caveat', cursive; line-height:1.15; font-size:clamp(39px,3.4vw,57px); margin:0; letter-spacing:-.02em; line-height:1">Nikunj Jambu</h1>
-        <span style="font-size:16.2px; color:#5a564a">Conservation biologist · spatial ecologist · MEL specialist</span>
+        <span style="font-size:19px; color:#5a564a">Conservation biologist · spatial ecologist · MEL specialist</span>
       </div>
       <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap">
-        <a href="uploads/Nikunj_Jambu_CV_2pg.pdf" download="" style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(26,28,25,.3); padding:9px 13px">CV (PDF)</a>
-        <a href="#n-contact" style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; background:#2f4432; color:#f4f2e6; padding:10px 14px">Write to me</a>
-        <button onClick="{{ backToChooser }}" style="cursor:pointer; font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; background:transparent; border:1px solid rgba(26,28,25,.3); color:#7a2f2f; padding:9px 13px">Notebook ↺</button>
+        <a href="uploads/Nikunj_Jambu_CV_2pg.pdf" download="" style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(26,28,25,.3); padding:9px 13px">CV (PDF)</a>
+        <a href="#n-contact" style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; background:#2f4432; color:#f4f2e6; padding:10px 14px">Write to me</a>
+        <button onClick="{{ backToChooser }}" style="cursor:pointer; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; background:transparent; border:1px solid rgba(26,28,25,.3); color:#7a2f2f; padding:9px 13px">Notebook ↺</button>
       </div>
     </div>
 
-    <div style="display:grid; grid-template-columns:minmax(0,1.6fr) minmax(260px,0.95fr); gap:0; border-bottom:1px solid rgba(26,28,25,.22)">
+    <div class="nb-top" style="display:grid; grid-template-columns:minmax(0,1.6fr) minmax(260px,0.95fr); gap:0; border-bottom:1px solid rgba(26,28,25,.22)">
       <div style="padding:28px 30px; background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 30px, rgba(47,68,50,.13) 30px, rgba(47,68,50,.13) 31px); background-position:0 6px; border-right:1px solid rgba(122,47,47,.28)">
-        <p style="margin:0 0 16px; font-family:'Kalam', cursive; font-size:19px; line-height:1.55; color:#211f19; text-wrap:pretty">{{ profile1 }}</p>
-        <p style="margin:0; font-size:18px; line-height:1.62; color:#4a463c; text-wrap:pretty">{{ profile2 }}</p>
+        <p style="margin:0 0 16px; font-family:'Kalam', cursive; font-size:22.5px; line-height:1.55; color:#211f19; text-wrap:pretty">{{ profile1 }}</p>
+        <p style="margin:0; font-size:21px; line-height:1.62; color:#4a463c; text-wrap:pretty">{{ profile2 }}</p>
       </div>
       <div style="padding:26px 26px 30px; display:flex; flex-direction:column; gap:14px">
         <div style="position:relative; flex:1 1 auto; min-height:250px; background:#fff; border:1px solid rgba(26,28,25,.2); padding:9px">
           <span aria-hidden="true" style="position:absolute; top:-11px; left:50%; transform:translateX(-50%) rotate(-2deg); width:86px; height:22px; background:rgba(201,194,164,.72); border-left:1px solid rgba(26,28,25,.08); border-right:1px solid rgba(26,28,25,.08)"></span>
           <div style="position:relative; width:100%; height:100%"><image-slot id="portrait" src="uploads/web/4851.jpg" shape="rect" fit="cover" placeholder="Portrait"></image-slot></div>
         </div>
-        <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:#7d7869">Plate i · in the field</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#7d7869">Plate i · in the field</span>
       </div>
     </div>
 
     <section id="n-work" style="padding:30px; border-bottom:1px solid rgba(26,28,25,.22)">
       <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between; margin-bottom:22px">
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30.2px; margin:0">Portals &amp; tools</h2>
-        <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#7d7869">Specimen labels · built with Claude Code</span>
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:35.5px; margin:0">Portals &amp; tools</h2>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#7d7869">Specimen labels · built with Claude Code</span>
       </div>
-      <p style="margin:-6px 0 22px; max-width:68ch; font-size:17px; line-height:1.5; color:#3a372d"><span style="font-weight:700">Personal projects, built and maintained by me.</span> Portals, atlases and dashboards I made on my own time to put wildlife, heritage and spatial data within anyone&#8217;s reach. Each opens a full write-up.</p>
+      <p style="margin:-6px 0 22px; max-width:68ch; font-size:20px; line-height:1.5; color:#3a372d"><span style="font-weight:700">Personal projects, built and maintained by me.</span> Portals, atlases and dashboards I made on my own time to put wildlife, heritage and spatial data within anyone&#8217;s reach. Each opens a full write-up.</p>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:22px">
         <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
           <a href="{{ p.page }}" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:12px">
@@ -1625,11 +1627,11 @@
             </div>
             <div style="border:1px solid rgba(26,28,25,.24); background:#f6f2e4; padding:13px 15px; display:flex; flex-direction:column; gap:7px">
               <div style="display:flex; gap:10px; align-items:baseline; justify-content:space-between">
-                <h3 style="font-family:'Caveat', cursive; line-height:1.15; font-size:20.9px; margin:0">{{ p.name }}</h3>
-                <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#7a2f2f">{{ p.num }}</span>
+                <h3 style="font-family:'Caveat', cursive; line-height:1.15; font-size:24.5px; margin:0">{{ p.name }}</h3>
+                <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7a2f2f">{{ p.num }}</span>
               </div>
-              <p style="margin:0; font-size:16.2px; line-height:1.6; color:#4a463c">{{ p.desc }}</p>
-              <span style="overflow-wrap:anywhere; font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.08em; color:#2f4432">{{ p.domain }} →</span>
+              <p style="margin:0; font-size:19px; line-height:1.6; color:#4a463c">{{ p.desc }}</p>
+              <span style="overflow-wrap:anywhere; font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.08em; color:#2f4432">{{ p.domain }} →</span>
             </div>
           </a>
         </sc-for>
@@ -1637,14 +1639,14 @@
     </section>
 
     <section id="n-exp" style="padding:30px; border-bottom:1px solid rgba(26,28,25,.22); background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 30px, rgba(47,68,50,.13) 30px, rgba(47,68,50,.13) 31px); background-position:0 6px">
-      <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30.2px; margin:0 0 8px">Entries</h2>
+      <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:35.5px; margin:0 0 8px">Entries</h2>
       <sc-for list="{{ roles }}" as="r" hint-placeholder-count="4">
         <div style="display:grid; grid-template-columns:minmax(0,132px) minmax(0,1fr); gap:24px; padding:18px 0; border-bottom:1px solid rgba(47,68,50,.18)">
-          <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#7a2f2f; line-height:1.5; padding-top:4px">{{ r.period }}</span>
+          <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#7a2f2f; line-height:1.5; padding-top:4px">{{ r.period }}</span>
           <div>
-            <h3 style="font-family:'Caveat', cursive; line-height:1.15; font-size:22px; margin:0 0 2px">{{ r.title }}</h3>
-            <p style="margin:0 0 9px; font-size:15.7px; color:#7d7869">{{ r.org }}</p>
-            <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:7px; font-size:17.4px; line-height:1.62; color:#4a463c; max-width:74ch">
+            <h3 style="font-family:'Caveat', cursive; line-height:1.15; font-size:26px; margin:0 0 2px">{{ r.title }}</h3>
+            <p style="margin:0 0 9px; font-size:18.5px; color:#7d7869">{{ r.org }}</p>
+            <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:7px; font-size:20.5px; line-height:1.62; color:#4a463c; max-width:74ch">
               <sc-for list="{{ r.bullets }}" as="b" hint-placeholder-count="2"><li>{{ b }}</li></sc-for>
             </ul>
           </div>
@@ -1654,37 +1656,37 @@
 
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(290px,1fr)); gap:0; border-bottom:1px solid rgba(26,28,25,.22)">
       <section style="padding:28px 30px; border-right:1px solid rgba(26,28,25,.16)">
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:25.5px; margin:0 0 18px">Methods</h2>
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30px; margin:0 0 18px">Methods</h2>
         <div style="display:flex; flex-direction:column; gap:15px">
           <sc-for list="{{ skills }}" as="s" hint-placeholder-count="4">
             <div>
-              <p style="margin:0 0 4px; font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#7a2f2f">{{ s.label }}</p>
-              <p style="margin:0; font-size:16.8px; line-height:1.6; color:#4a463c">{{ s.text }}</p>
+              <p style="margin:0 0 4px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#7a2f2f">{{ s.label }}</p>
+              <p style="margin:0; font-size:20px; line-height:1.6; color:#4a463c">{{ s.text }}</p>
             </div>
           </sc-for>
         </div>
       </section>
       <section style="padding:28px 30px; border-right:1px solid rgba(26,28,25,.16)">
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:25.5px; margin:0 0 18px">Education</h2>
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30px; margin:0 0 18px">Education</h2>
         <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:26px">
           <sc-for list="{{ education }}" as="e" hint-placeholder-count="3">
             <div>
-              <p style="margin:0; font-size:17.4px; font-weight:600">{{ e.degree }}</p>
-              <p style="margin:3px 0 0; font-size:15.7px; color:#7d7869">{{ e.place }}</p>
+              <p style="margin:0; font-size:20.5px; font-weight:600">{{ e.degree }}</p>
+              <p style="margin:3px 0 0; font-size:18.5px; color:#7d7869">{{ e.place }}</p>
             </div>
           </sc-for>
         </div>
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:25.5px; margin:0 0 16px">Grants &amp; outreach</h2>
-        <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px; font-size:16.8px; line-height:1.6; color:#4a463c">
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30px; margin:0 0 16px">Grants &amp; outreach</h2>
+        <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px; font-size:20px; line-height:1.6; color:#4a463c">
           <sc-for list="{{ grants }}" as="g" hint-placeholder-count="3"><li>{{ g }}</li></sc-for>
         </ul>
       </section>
       <section style="padding:28px 30px">
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:25.5px; margin:0 0 16px">Certifications</h2>
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30px; margin:0 0 16px">Certifications</h2>
         <div style="display:flex; flex-direction:column; gap:8px">
           <sc-for list="{{ certs }}" as="c" hint-placeholder-count="8">
-            <button type="button" onClick="{{ c.open }}" style="text-align:left; cursor:pointer; font-family:'Kalam', cursive; border:1px solid rgba(26,28,25,.22); background:#f6f2e4; padding:9px 12px; font-size:14.5px; line-height:1.4; color:#4a463c; display:flex; justify-content:space-between; gap:10px; align-items:baseline" style-hover="border-color:#7a2f2f; color:#211f19">
-              <span>{{ c.name }}</span><span style="font-family:'Space Mono', monospace; font-size:9.5px; color:#7a2f2f">View ↗</span>
+            <button type="button" onClick="{{ c.open }}" style="text-align:left; cursor:pointer; font-family:'Kalam', cursive; border:1px solid rgba(26,28,25,.22); background:#f6f2e4; padding:9px 12px; font-size:17px; line-height:1.4; color:#4a463c; display:flex; justify-content:space-between; gap:10px; align-items:baseline" style-hover="border-color:#7a2f2f; color:#211f19">
+              <span>{{ c.name }}</span><span style="font-family:'Space Mono', monospace; font-size:12px; color:#7a2f2f">View ↗</span>
             </button>
           </sc-for>
         </div>
@@ -1692,12 +1694,12 @@
     </div>
 
     <section id="n-pub" style="padding:30px; border-bottom:1px solid rgba(26,28,25,.22)">
-      <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30.2px; margin:0 0 20px">Published</h2>
+      <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:35.5px; margin:0 0 20px">Published</h2>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:14px">
         <sc-for list="{{ pubs }}" as="p" hint-placeholder-count="5">
           <div style="border:1px solid rgba(26,28,25,.2); background:#f6f2e4; padding:14px 16px; display:flex; flex-direction:column; gap:7px">
-            <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; color:#7a2f2f">{{ p.year }}</span>
-            <p style="margin:0; font-size:16.2px; line-height:1.6; color:#4a463c"><span style="color:#211f19; font-weight:600">{{ p.authors }}</span> {{ p.title }} <em>{{ p.venue }}</em></p>
+            <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; color:#7a2f2f">{{ p.year }}</span>
+            <p style="margin:0; font-size:19px; line-height:1.6; color:#4a463c"><span style="color:#211f19; font-weight:600">{{ p.authors }}</span> {{ p.title }} <em>{{ p.venue }}</em></p>
           </div>
         </sc-for>
       </div>
@@ -1705,15 +1707,15 @@
 
     <section id="n-field" style="padding:30px; border-bottom:1px solid rgba(26,28,25,.22)">
       <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between; margin-bottom:22px">
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30.2px; margin:0">Plates</h2>
-        <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#7d7869">Photographs, maps &amp; spatial figures</span>
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:35.5px; margin:0">Plates</h2>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#7d7869">Photographs, maps &amp; spatial figures</span>
       </div>
       <div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:26px">
         <sc-for list="{{ photos }}" as="ph" hint-placeholder-count="6">
           <figure role="button" tabindex="0" onClick="{{ ph.open }}" style="margin:0; cursor:zoom-in; flex:{{ ph.arn }} 1 {{ ph.basis }}px; min-width:0; display:flex; flex-direction:column; gap:9px">
             <div style="position:relative; background:#fff; border:1px solid rgba(26,28,25,.2); padding:9px"><span aria-hidden="true" style="position:absolute; top:-11px; left:50%; transform:translateX(-50%) rotate(-1.4deg); width:86px; height:22px; background:rgba(201,194,164,.72); border-left:1px solid rgba(26,28,25,.08); border-right:1px solid rgba(26,28,25,.08)"></span><div style="position:relative; width:100%; aspect-ratio:{{ ph.ar }}"><image-slot style="position:absolute; inset:0" id="{{ ph.src }}" src="{{ ph.src }}" shape="rect" fit="cover" placeholder="Field photograph"></image-slot></div></div>
-            <figcaption style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:#7d7869">Plate {{ ph.plate }}</figcaption>
-            <figcaption style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:#9a9384; margin-top:-5px">{{ ph.cap }}</figcaption>
+            <figcaption style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#7d7869">Plate {{ ph.plate }}</figcaption>
+            <figcaption style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#9a9384; margin-top:-5px">{{ ph.cap }}</figcaption>
           </figure>
         </sc-for>
         <i aria-hidden="true" style="flex:1000 1 230px"></i>
@@ -1722,17 +1724,17 @@
 
     <section id="n-press" style="padding:30px; border-bottom:1px solid rgba(26,28,25,.22)">
       <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between; margin-bottom:22px">
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:34px; margin:0">Clippings</h2>
-        <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#7d7869">Pasted in · press coverage</span>
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:40px; margin:0">Clippings</h2>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#7d7869">Pasted in · press coverage</span>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px">
         <sc-for list="{{ press }}" as="a" hint-placeholder-count="3">
           <button type="button" onClick="{{ a.open }}" style="position:relative; text-align:left; cursor:pointer; font-family:'Kalam', cursive; border:1px solid rgba(26,28,25,.24); background:#fffdf6; padding:18px 16px 16px; display:flex; flex-direction:column; gap:9px; color:#211f19; box-shadow:0 1px 0 rgba(26,28,25,.08)" style-hover="border-color:#7a2f2f">
             <span aria-hidden="true" style="position:absolute; top:-11px; left:50%; transform:translateX(-50%) rotate(-1.5deg); width:76px; height:20px; background:rgba(201,194,164,.72)"></span>
-            <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#7a2f2f">{{ a.outlet }} · {{ a.date }}</span>
-            <span style="font-family:'Caveat', cursive; line-height:1.2; font-size:24px">{{ a.title }}</span>
-            <span style="font-size:14.5px; color:#5a564a">{{ a.role }}</span>
-            <span style="margin-top:auto; font-family:'Space Mono', monospace; font-size:10px; color:#2f4432">Read →</span>
+            <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7a2f2f">{{ a.outlet }} · {{ a.date }}</span>
+            <span style="font-family:'Caveat', cursive; line-height:1.2; font-size:28.5px">{{ a.title }}</span>
+            <span style="font-size:17px; color:#5a564a">{{ a.role }}</span>
+            <span style="margin-top:auto; font-family:'Space Mono', monospace; font-size:12px; color:#2f4432">Read →</span>
           </button>
         </sc-for>
       </div>
@@ -1740,26 +1742,26 @@
 
     <section id="n-avoc" style="padding:30px; border-bottom:1px solid rgba(26,28,25,.22)">
       <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between; margin-bottom:22px">
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:34px; margin:0">Avocations</h2>
-        <span style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#7d7869">Beyond the field</span>
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:40px; margin:0">Avocations</h2>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#7d7869">Beyond the field</span>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:28px; font-size:17px; line-height:1.5; color:#3a372d">
-        <div><h3 style="margin:0 0 8px; font-family:'Caveat', cursive; font-size:26px; font-weight:700; color:#2f4432">{{ avocTitle }}</h3><p style="margin:0 0 8px">{{ avocIntro }}</p><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:5px"><sc-for list="{{ avocCamps }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
-        <div><h3 style="margin:0 0 8px; font-family:'Caveat', cursive; font-size:26px; font-weight:700; color:#2f4432">{{ avocWonLabel }}</h3><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:5px"><sc-for list="{{ avocWins }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:28px; font-size:20px; line-height:1.5; color:#3a372d">
+        <div><h3 style="margin:0 0 8px; font-family:'Caveat', cursive; font-size:30.5px; font-weight:700; color:#2f4432">{{ avocTitle }}</h3><p style="margin:0 0 8px">{{ avocIntro }}</p><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:5px"><sc-for list="{{ avocCamps }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
+        <div><h3 style="margin:0 0 8px; font-family:'Caveat', cursive; font-size:30.5px; font-weight:700; color:#2f4432">{{ avocWonLabel }}</h3><ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:5px"><sc-for list="{{ avocWins }}" as="t"><li>{{ t }}</li></sc-for></ul></div>
       </div>
     </section>
 
 <sc-if value="{{ showNotes }}">
     <section id="n-notes" style="padding:30px; border-bottom:1px solid rgba(26,28,25,.22); background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 30px, rgba(47,68,50,.13) 30px, rgba(47,68,50,.13) 31px); background-position:0 6px">
       <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between; margin-bottom:10px">
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30.2px; margin:0">Notes</h2>
-        <a href="blog/" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#7a2f2f">All notes →</a>
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:35.5px; margin:0">Notes</h2>
+        <a href="blog/" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#7a2f2f">All notes →</a>
       </div>
       <sc-for list="{{ notes }}" as="n" hint-placeholder-count="3">
         <a href="{{ n.url }}" target="_blank" rel="noopener" onClick="{{ saveReturn }}" style="display:grid; grid-template-columns:100px 1fr auto; gap:20px; align-items:baseline; padding:16px 0; border-bottom:1px solid rgba(47,68,50,.18)">
-          <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#7d7869">{{ n.date }}</span>
-          <span style="font-family:'Caveat', cursive; line-height:1.15; font-size:19.7px">{{ n.title }}</span>
-          <span style="font-size:15.1px; color:#2f4432">Read →</span>
+          <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#7d7869">{{ n.date }}</span>
+          <span style="font-family:'Caveat', cursive; line-height:1.15; font-size:23px">{{ n.title }}</span>
+          <span style="font-size:18px; color:#2f4432">Read →</span>
         </a>
       </sc-for>
     </section>
@@ -1767,23 +1769,19 @@
 
     <section id="n-contact" style="padding:30px; display:grid; grid-template-columns:repeat(auto-fit, minmax(290px,1fr)); gap:40px; align-items:start">
       <div>
-        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:30.2px; margin:0 0 14px">Write to me</h2>
-        <p style="margin:0 0 24px; font-size:18px; line-height:1.65; color:#4a463c; max-width:40ch">{{ contactLine }}</p>
-        <dl style="margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px; font-size:16.8px; align-content:start">
-          <dt style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#7d7869; padding-top:4px">Email</dt>
+        <h2 style="font-family:'Caveat', cursive; line-height:1.15; font-size:35.5px; margin:0 0 14px">Write to me</h2>
+        <p style="margin:0 0 24px; font-size:21px; line-height:1.65; color:#4a463c; max-width:40ch">{{ contactLine }}</p>
+      </div>
+      <div>
+        <dl style="margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px; font-size:20px; align-content:start">
+          <dt style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7d7869; padding-top:4px">Email</dt>
           <dd style="margin:0"><a href="mailto:jambu.nikunj@gmail.com" style="color:#2f4432">jambu.nikunj@gmail.com</a></dd>
-          <dt style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#7d7869; padding-top:4px">Phone</dt>
+          <dt style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7d7869; padding-top:4px">Phone</dt>
           <dd style="margin:0">+91 9150791698</dd>
-          <dt style="font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#7d7869; padding-top:4px">LinkedIn</dt>
+          <dt style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7d7869; padding-top:4px">LinkedIn</dt>
           <dd style="margin:0"><a href="https://linkedin.com/in/nikunj-jambu-48271666/" style="color:#2f4432">nikunj-jambu</a></dd>
         </dl>
       </div>
-      <form onSubmit="{{ onSubmit }}" style="display:flex; flex-direction:column; gap:12px">
-        <input name="name" required placeholder="Name" style="padding:12px 14px; border:1px solid rgba(26,28,25,.26); background:#f6f2e4; color:#211f19; font-family:'Kalam', cursive; font-size:17.4px" />
-        <input name="email" required placeholder="Email" type="email" style="padding:12px 14px; border:1px solid rgba(26,28,25,.26); background:#f6f2e4; color:#211f19; font-family:'Kalam', cursive; font-size:17.4px" />
-        <textarea name="message" required placeholder="Message" rows="3" style="padding:12px 14px; border:1px solid rgba(26,28,25,.26); background:#f6f2e4; color:#211f19; font-family:'Kalam', cursive; font-size:17.4px; resize:vertical"></textarea>
-        <button type="submit" style="padding:13px; background:#2f4432; color:#f4f2e6; border:none; font-family:'Kalam', cursive; font-size:17.4px; font-weight:600; cursor:pointer">{{ sendLabel }}</button>
-      </form>
     </section>
   </div>
 </div>
@@ -1793,31 +1791,31 @@
   <div onClick="{{ stopClose }}" style="width:min(880px, 100%); max-height:100%; background:#fbfaf5; border:1px solid rgba(26,28,25,.5); display:flex; flex-direction:column">
     <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:baseline; justify-content:space-between; padding:20px 24px; border-bottom:1px solid rgba(26,28,25,.28)">
       <div style="display:flex; flex-direction:column; gap:6px; min-width:0">
-        <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:#7a2f2f">{{ pressOutlet }} · {{ pressDate }}</span>
-        <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:20px; line-height:1.3; color:#1a1c19">{{ pressTitle }}</span>
-        <span style="font-size:13px; color:#6d706a">{{ pressByline }}</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#7a2f2f">{{ pressOutlet }} · {{ pressDate }}</span>
+        <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:23.5px; line-height:1.3; color:#1a1c19">{{ pressTitle }}</span>
+        <span style="font-size:15.5px; color:#6d706a">{{ pressByline }}</span>
       </div>
-      <button type="button" onClick="{{ closePress }}" style="cursor:pointer; font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(26,28,25,.3); background:transparent; padding:9px 13px; color:#1a1c19">Close ✕</button>
+      <button type="button" onClick="{{ closePress }}" style="cursor:pointer; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(26,28,25,.3); background:transparent; padding:9px 13px; color:#1a1c19">Close ✕</button>
     </div>
     <div style="flex:1 1 auto; min-height:0; overflow:auto; padding:24px; display:flex; flex-direction:column; gap:20px">
-      <p style="margin:0; font-size:16px; line-height:1.7; color:#3a3d38; max-width:66ch; text-wrap:pretty">{{ pressSummary }}</p>
+      <p style="margin:0; font-size:19px; line-height:1.7; color:#3a3d38; max-width:66ch; text-wrap:pretty">{{ pressSummary }}</p>
       <sc-if value="{{ pressHasQuote }}">
-      <blockquote style="margin:0; border-left:2px solid #7a2f2f; padding:2px 0 2px 18px; font-family:'Libre Baskerville', Georgia, serif; font-size:17px; line-height:1.6; color:#1a1c19; max-width:60ch">“{{ pressQuote }}”<span style="display:block; margin-top:8px; font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#7a2f2f">Nikunj Jambu, quoted in {{ pressOutlet }}</span></blockquote>
+      <blockquote style="margin:0; border-left:2px solid #7a2f2f; padding:2px 0 2px 18px; font-family:'Libre Baskerville', Georgia, serif; font-size:20px; line-height:1.6; color:#1a1c19; max-width:60ch">“{{ pressQuote }}”<span style="display:block; margin-top:8px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7a2f2f">Nikunj Jambu, quoted in {{ pressOutlet }}</span></blockquote>
       </sc-if>
       <div style="display:flex; flex-direction:column; gap:9px">
-        <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">From the article</span>
-        <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px; font-size:15px; line-height:1.65; color:#4a4d47; max-width:64ch">
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#8b8e86">From the article</span>
+        <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px; font-size:17.5px; line-height:1.65; color:#4a4d47; max-width:64ch">
           <sc-for list="{{ pressPoints }}" as="pt" hint-placeholder-count="3"><li>{{ pt }}</li></sc-for>
         </ul>
       </div>
-      <dl style="margin:0; padding-top:16px; border-top:1px solid rgba(26,28,25,.2); display:grid; grid-template-columns:auto 1fr; gap:8px 18px; font-family:'Space Mono', monospace; font-size:9.5px; letter-spacing:.08em; line-height:1.5; color:#6d706a">
+      <dl style="margin:0; padding-top:16px; border-top:1px solid rgba(26,28,25,.2); display:grid; grid-template-columns:auto 1fr; gap:8px 18px; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.08em; line-height:1.5; color:#6d706a">
         <dt style="text-transform:uppercase; color:#8b8e86">My role</dt><dd style="margin:0">{{ pressRole }}</dd>
         <dt style="text-transform:uppercase; color:#8b8e86">Published at</dt><dd style="margin:0; word-break:break-all">{{ pressHost }}</dd>
       </dl>
     </div>
     <div style="padding:18px 24px; border-top:1px solid rgba(26,28,25,.28); display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between">
-      <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:#8b8e86">Summary prepared for this site · not the publisher’s text</span>
-      <a href="{{ pressUrl }}" target="_blank" rel="noopener" style="font-family:'Space Grotesk', sans-serif; font-size:14px; font-weight:600; background:#7a2f2f; color:#f8f6f0; padding:12px 20px">Read on {{ pressOutlet }} ↗</a>
+      <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8b8e86">Summary prepared for this site · not the publisher’s text</span>
+      <a href="{{ pressUrl }}" target="_blank" rel="noopener" style="font-family:'Space Grotesk', sans-serif; font-size:16.5px; font-weight:600; background:#7a2f2f; color:#f8f6f0; padding:12px 20px">Read on {{ pressOutlet }} ↗</a>
     </div>
   </div>
 </div>
@@ -1828,26 +1826,26 @@
   <div onClick="{{ stopClose }}" style="width:min(1040px, 100%); height:min(760px, 100%); background:#fbfaf5; border:1px solid rgba(26,28,25,.5); display:flex; flex-direction:column">
     <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:baseline; justify-content:space-between; padding:18px 22px; border-bottom:1px solid rgba(26,28,25,.28)">
       <div style="display:flex; flex-direction:column; gap:5px; min-width:0">
-        <span style="font-family:'Space Mono', monospace; font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:#7a2f2f">Certificate · {{ certIssuer }}</span>
-        <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:18px; color:#1a1c19">{{ certName }}</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#7a2f2f">Certificate · {{ certIssuer }}</span>
+        <span style="font-family:'Libre Baskerville', Georgia, serif; font-size:21px; color:#1a1c19">{{ certName }}</span>
       </div>
       <div style="display:flex; gap:10px; align-items:center">
-        <a href="{{ certUrl }}" target="_blank" rel="noopener" style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(26,28,25,.3); padding:9px 13px; color:#1a1c19">Open original ↗</a>
-        <button type="button" onClick="{{ closeCert }}" style="cursor:pointer; font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(26,28,25,.3); background:transparent; padding:9px 13px; color:#1a1c19">Close ✕</button>
+        <a href="{{ certUrl }}" target="_blank" rel="noopener" style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(26,28,25,.3); padding:9px 13px; color:#1a1c19">Open original ↗</a>
+        <button type="button" onClick="{{ closeCert }}" style="cursor:pointer; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(26,28,25,.3); background:transparent; padding:9px 13px; color:#1a1c19">Close ✕</button>
       </div>
     </div>
     <div style="flex:1 1 auto; min-height:0; overflow:auto; background:#f3f0e7; padding:24px; display:flex; flex-direction:column; gap:16px">
       <div style="flex:1 1 auto; min-height:340px; position:relative; border:1px solid rgba(26,28,25,.28); background:#fbfaf5">
         <image-slot style="position:absolute; inset:0" id="{{ certSlot }}" src="{{ certImg }}" shape="rect" fit="contain" placeholder="Drop the certificate image"></image-slot>
       </div>
-      <div style="flex:0 0 auto; display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; justify-content:space-between; font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.08em; color:#6d706a">
+      <div style="flex:0 0 auto; display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; justify-content:space-between; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.08em; color:#6d706a">
         <div style="display:flex; flex-wrap:wrap; gap:8px 22px; min-width:0">
           <span><span style="text-transform:uppercase; color:#8b8e86">Issuer</span> &nbsp;{{ certIssuer }}</span>
           <sc-if value="{{ certHasId }}">
             <span style="word-break:break-all"><span style="text-transform:uppercase; color:#8b8e86">Credential</span> &nbsp;{{ certId }}</span>
           </sc-if>
         </div>
-        <a href="{{ certUrl }}" target="_blank" rel="noopener" style="flex:none; font-family:'Space Grotesk', sans-serif; font-size:13px; font-weight:600; letter-spacing:0; background:#7a2f2f; color:#f8f6f0; padding:11px 18px">Verify on {{ certIssuer }} ↗</a>
+        <a href="{{ certUrl }}" target="_blank" rel="noopener" style="flex:none; font-family:'Space Grotesk', sans-serif; font-size:15.5px; font-weight:600; letter-spacing:0; background:#7a2f2f; color:#f8f6f0; padding:11px 18px">Verify on {{ certIssuer }} ↗</a>
       </div>
     </div>
   </div>
@@ -1858,8 +1856,8 @@
 <div onClick="{{ closePhoto }}" style="position:fixed; inset:0; z-index:90; background:rgba(12,14,10,.93); backdrop-filter:blur(4px); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; padding:28px; cursor:zoom-out">
   <img src="{{ photoSrc }}" alt="{{ photoCap }}" onClick="{{ stopClose }}" style="max-width:min(1500px, 100%); max-height:calc(100vh - 132px); object-fit:contain; cursor:default; border:1px solid rgba(240,238,228,.22)" />
   <div style="display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:center">
-    <span style="font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(240,238,228,.72)">{{ photoCap }}</span>
-    <button type="button" onClick="{{ closePhoto }}" style="cursor:pointer; font-family:'Space Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(240,238,228,.35); background:transparent; padding:9px 13px; color:#f0eee4">Close ✕</button>
+    <span style="font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:rgba(240,238,228,.72)">{{ photoCap }}</span>
+    <button type="button" onClick="{{ closePhoto }}" style="cursor:pointer; font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(240,238,228,.35); background:transparent; padding:9px 13px; color:#f0eee4">Close ✕</button>
   </div>
 </div>
 </sc-if>
@@ -2065,7 +2063,7 @@ const ROMAN = ['i','ii','iii','iv','v','vi','vii','viii','ix','x','xi','xii'];
 // The clock times and camera id on the station notes came from this site's old live-survey demo,
 // not from the record, so only the method is shown until Nikunj confirms specifics.
 const s6Method = n => String(n).replace(/\s*·\s*\d{1,2}:\d{2}\s*$/, '').replace(/\s*·\s*triggered\s*$/i, '').replace(/\bC-\d+\s*/, '').trim();
-const S6_SECTIONS = [['Profile','Profile'],['Instruments built','Tools'],['Plates','Plates'],['Appointments','Posts'],['Publications','Papers'],['Press','Press'],['Method and certification','Method'],['Avocations','NCC'],['Correspondence','Contact']];
+const S6_SECTIONS = [['Profile','Profile'],['Instruments built','Tools'],['Plates','Plates'],['Experience','Work'],['Publications','Papers'],['Press','Press'],['Method and certification','Method'],['Avocations','NCC'],['Correspondence','Contact']];
 const S6_NOTES = ['Notes','Notes'];
 // Portal write-ups. A section shows in the popup only once it has text; nothing empty ever ships.
 class Component extends DCLogic {
